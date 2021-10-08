@@ -1,6 +1,6 @@
 <?php
 
-use App\Http\Controllers\AdminController;
+use App\Http\Controllers\Admin\AdminController;
 use App\Http\Controllers\Auth\loginController;
 use App\Http\Controllers\Auth\Register\CustomerController;
 use App\Http\Controllers\Auth\Register\EmployeeController;
@@ -40,13 +40,15 @@ Route::group(['middleware' => 'checkrole'], function () {
 
 });
 
+// Route Home Controller Pink and Sliver Controller
 Route::group(['as' => 'Home.'], function () {
     Route::get('Brands', [HomeController::class, 'brand'])->name('brands');
     Route::get('Catalogue', [HomeController::class, 'catalogue'])->name('catalogue');
     Route::get('Teams', [HomeController::class, 'team'])->name('team');
 });
 
-// Routes for the Owner/Employee Section
+
+// Routes for the Owner/Employee Section Akeem Hernry Controllers
 Route::resource('Owner', EmployeeDashController::class);
 
 Route::group(['as' => 'Owner'], function () {
@@ -55,10 +57,11 @@ Route::group(['as' => 'Owner'], function () {
 });
 
 
-// Routes for the Admin
+// Routes for the Admin Prokushxx Controller
 Route::resource('Admin', AdminController::class);
 
 
+//Route For Logout
 Route::post('logout', [LogoutController::class, 'logout'])->name('logout');
 
 

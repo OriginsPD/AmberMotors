@@ -23,12 +23,12 @@ class Employee extends Model
     ];
 
 
-    public function rentals()
+    public function rentals(): \Illuminate\Database\Eloquent\Relations\HasMany
     {
         return $this->hasMany(Rental::class);
     }
 
-    public function setEmployeeNbrAttribute($value)
+    public function setEmployeeNbrAttribute($value): string
     {
         return $this->attributes['employee_nbr'] = 'BK-'. (1000 + $value);
     }

@@ -28,7 +28,6 @@ class Bike_Detail extends Model
     public function bike_category(): \Illuminate\Database\Eloquent\Relations\BelongsTo
     {
         return $this->belongsTo(Bike_Category::class);
-
     }
 
     public function rentals(): \Illuminate\Database\Eloquent\Relations\HasMany

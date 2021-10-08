@@ -50,6 +50,7 @@ class User extends Authenticatable
         'email_verified_at' => 'datetime',
     ];
 
+//    Password Mutator
     public function setPasswordAttribute($value): string
     {
         return $this->attributes['password'] = bcrypt($value);
@@ -70,16 +71,6 @@ class User extends Authenticatable
     public function rentals(): \Illuminate\Database\Eloquent\Relations\HasMany
     {
         return $this->hasMany(Rental::class);
-    }
-
-    public function payments(): \Illuminate\Database\Eloquent\Relations\HasMany
-    {
-        return $this->hasMany(Payment::class);
-    }
-
-    public function penalties(): \Illuminate\Database\Eloquent\Relations\HasMany
-    {
-        return $this->hasMany(Penalty::class);
     }
 
 }

@@ -19,6 +19,7 @@ class loginController extends Controller
     public function store(CheckUser $request): RedirectResponse
     {
         if(Auth::attempt($request->validated())){
+
             $user = User::with('roles')->where('id',Auth::id())->get()->toArray();
             session()->put('role',$user[0]['roles'][0]['pivot']['role_id']);
 

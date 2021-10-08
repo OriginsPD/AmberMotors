@@ -11,11 +11,10 @@ class CreatePenaltiesTable extends Migration
      *
      * @return void
      */
-    public function up()
+    public function up(): void
     {
         Schema::create('penalties', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('user_id')->constrained('users','id');
             $table->foreignId('rental_id')->constrained('rentals','id');
             $table->integer('penalty_amount');
             $table->boolean('payment_status')->default(0);
@@ -27,7 +26,7 @@ class CreatePenaltiesTable extends Migration
      *
      * @return void
      */
-    public function down()
+    public function down(): void
     {
         Schema::dropIfExists('penalties');
     }

@@ -31,6 +31,6 @@ class CreateBikeDetailsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('bike__details');
+        Schema::dropIfExists('bike_details');
     }
 }

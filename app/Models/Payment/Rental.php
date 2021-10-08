@@ -23,7 +23,12 @@ class Rental extends Model
         'rent_status',
         'rental_start_date',
         'rental_end_date',
+        'return_date',
     ];
+
+//    protected $hidden = [
+//        'user_id'
+//    ];
 
     public function users(): \Illuminate\Database\Eloquent\Relations\BelongsTo
     {

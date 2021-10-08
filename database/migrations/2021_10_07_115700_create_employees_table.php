@@ -17,7 +17,7 @@ class CreateEmployeesTable extends Migration
             $table->id();
             $table->string('employee_nbr');
             $table->foreignId('user_id')->constrained('users','id');
-            $table->boolean('active_flg')->default(1);
+            $table->boolean('active_flg')->default(0);
         });
     }
 

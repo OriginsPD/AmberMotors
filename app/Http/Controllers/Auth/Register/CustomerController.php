@@ -36,8 +36,8 @@ class CustomerController extends Controller
                 'user_id' => Auth::id(),
                 'role_id' => 1,
             ]);
+            return redirect()->route('index');
         }
-
 
         return redirect()->route('login.index');
     }

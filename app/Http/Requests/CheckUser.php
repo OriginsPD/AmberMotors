@@ -21,7 +21,7 @@ class CheckUser extends FormRequest
      *
      * @return array
      */
-    public function rules()
+    public function rules(): array
     {
         return [
             'email' => 'required|email',
@@ -29,7 +29,7 @@ class CheckUser extends FormRequest
         ];
     }
 
-    public function messages()
+    public function messages(): array
     {
         return [
             'email.required' => 'Please Enter Email',

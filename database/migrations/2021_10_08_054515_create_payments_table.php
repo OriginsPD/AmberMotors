@@ -11,11 +11,10 @@ class CreatePaymentsTable extends Migration
      *
      * @return void
      */
-    public function up()
+    public function up(): void
     {
         Schema::create('payments', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('user_id')->constrained('users','id');
             $table->foreignId('rental_id')->constrained('rentals','id');
             $table->integer('payment_type');
             $table->string('paid_by');
@@ -28,7 +27,7 @@ class CreatePaymentsTable extends Migration
      *
      * @return void
      */
-    public function down()
+    public function down(): void
     {
         Schema::dropIfExists('payments');
     }

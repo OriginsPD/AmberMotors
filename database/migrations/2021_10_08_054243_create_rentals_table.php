@@ -11,7 +11,7 @@ class CreateRentalsTable extends Migration
      *
      * @return void
      */
-    public function up()
+    public function up(): void
     {
         Schema::create('rentals', function (Blueprint $table) {
             $table->id();
@@ -23,6 +23,7 @@ class CreateRentalsTable extends Migration
             $table->boolean('rent_status')->default(0);
             $table->date('rental_start_date');
             $table->date('rental_end_date');
+            $table->date('return_date');
 
         });
     }
@@ -32,7 +33,7 @@ class CreateRentalsTable extends Migration
      *
      * @return void
      */
-    public function down()
+    public function down(): void
     {
         Schema::dropIfExists('rentals');
     }

@@ -21,11 +21,6 @@ class Penalty extends Model
     ];
 
 
-    public function users(): \Illuminate\Database\Eloquent\Relations\BelongsTo
-    {
-        return $this->belongsTo(User::class);
-    }
-
     public function rentals(): \Illuminate\Database\Eloquent\Relations\BelongsTo
     {
         return $this->belongsTo(Rental::class);

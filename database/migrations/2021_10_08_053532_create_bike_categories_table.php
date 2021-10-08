@@ -11,7 +11,7 @@ class CreateBikeCategoriesTable extends Migration
      *
      * @return void
      */
-    public function up()
+    public function up(): void
     {
         Schema::create('bike_categories', function (Blueprint $table) {
             $table->id();
@@ -24,8 +24,8 @@ class CreateBikeCategoriesTable extends Migration
      *
      * @return void
      */
-    public function down()
+    public function down(): void
     {
-        Schema::dropIfExists('bike__categories');
+        Schema::dropIfExists('bike_categories');
     }
 }
