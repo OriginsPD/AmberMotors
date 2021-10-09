@@ -10,6 +10,8 @@ class Bike_Detail extends Model
 {
     use HasFactory;
 
+    public $table = 'bike_details';
+
     public $timestamps = false;
 
     protected $fillable = [
