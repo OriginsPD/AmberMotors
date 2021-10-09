@@ -9,6 +9,8 @@ class Bike_Brand extends Model
 {
     use HasFactory;
 
+    public $table = 'bike_brands';
+
     public $timestamps = false;
 
     protected $fillable = [
