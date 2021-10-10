@@ -79,9 +79,12 @@ class AdminUserController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $req, $id)
     {
-        //
+      $user = User::find($id);
+      $user->Active_flag = $req->activate;
+      $user->update();
+      return redirect()->back();
     }
 
     /**
@@ -90,8 +93,11 @@ class AdminUserController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(Request $req,$id)
     {
-        //
+      $user = User::find($id);
+      $user->Active_flag = $req->deactivate;
+      $user->update();
+      return redirect()->back();
     }
 }
