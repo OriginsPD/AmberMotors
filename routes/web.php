@@ -4,14 +4,6 @@
 use App\Http\Controllers\Admin\AdminEmployeeController;
 use App\Http\Controllers\Admin\AdminUserController;
 use App\Http\Controllers\Admin\AdminController;
-use App\Http\Controllers\Auth\loginController;
-use App\Http\Controllers\Auth\Register\CustomerController;
-use App\Http\Controllers\Auth\Register\EmployeeController;
-use App\Http\Controllers\Auth\RegisterController;
-use App\Http\Controllers\Employee\BikeInfoController;
-use App\Http\Controllers\Employee\CustomerInfoController;
-use App\Http\Controllers\Employee\EmployeeDashController;
-use App\Http\Controllers\HomeController;
 use App\Http\Controllers\LogoutController;
 use Illuminate\Support\Facades\Route;
 
@@ -32,32 +24,16 @@ Route::group(['middleware' => 'checkrole'], function () {
     Route::view('/', 'welcome')->name('index');
 
     // Routes For Auth
-    Route::resource('login', loginController::class);
-    Route::resource('register', RegisterController::class);
-
-
-    Route::group(['as' => 'Register'], function () {
-        Route::resource('Customer', CustomerController::class);
-        Route::resource('Employee', EmployeeController::class);
-    });
+    require __DIR__.'/Auth/Auth.php';
 
 });
 
 // Route Home Controller Pink and Sliver Controller
-Route::group(['as' => 'Home.'], function () {
-    Route::get('Brands', [HomeController::class, 'brand'])->name('brands');
-    Route::get('Catalogue', [HomeController::class, 'catalogue'])->name('catalogue');
-    Route::get('Teams', [HomeController::class, 'team'])->name('team');
-});
+require __DIR__.'/Homepage/Home.php';
 
 
-// Routes for the Owner/Employee Section Akeem Hernry Controllers
-Route::resource('Owner', EmployeeDashController::class);
-
-Route::group(['as' => 'Owner'], function () {
-    Route::resource('Customerlist', CustomerInfoController::class);
-    Route::resource('Bike', BikeInfoController::class);
-});
+// Routes for the Owner/Employee Section Akeem Henry Controllers
+require __DIR__ . '/Owner/Owner.php';
 
 
 // Routes for the Admin Prokushxx Controller
@@ -65,6 +41,7 @@ Route::resource('Admin', AdminController::class);
 Route::resource('AdminEmployee', AdminEmployeeController::class);
 Route::resource('AdminUser', AdminUserController::class);
 Route::get('Users',function(){return view('Admin.users');})->name('user');
+
 
 
 //Route For Logout

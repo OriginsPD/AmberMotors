@@ -3,6 +3,7 @@
 @section('content')
 
 
+
 <section class="">
   <div class="ml-20 mx-auto bg-red-500 mt-20 max-h-0">
     <h5 class="text-white font-bold max-w-xl">Add A Brand</h5>
@@ -47,4 +48,5 @@
   </div>
 </div>
 <!-- component -->
+
 @endsection
