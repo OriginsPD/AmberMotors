@@ -42,7 +42,7 @@ class Rental extends Model
 
     public function bike_details(): \Illuminate\Database\Eloquent\Relations\BelongsTo
     {
-        return $this->belongsTo(Bike_Detail::class,'bike_id');
+        return $this->belongsTo(Bike_Detail::class,'bike_id')->with(['bike_brands','bike_category']);
     }
 
     public function payments(): \Illuminate\Database\Eloquent\Relations\HasMany

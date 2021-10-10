@@ -24,11 +24,11 @@
                 <x-table.cell class="text-center">{{ ($detail->availability === 1) ? 'Yes' : 'No'  }}</x-table.cell>
                 <x-table.cell-edit>
 
-                    <x-button.form name="{{$detail->id}}" action="{{ route('OwnerBike.show',$detail->id) }}">
+                    <x-button.form name="{{$detail->id}}" id="form_{{ $detail->id }}" action="{{ route('OwnerBike.show',$detail->id) }}">
                         @if($detail->availablity)
-                            <x-button.toggle checked />
+                            <x-button.toggle id="toggle_{{ $detail->id }}" form="{{$detail->id}}" />
                         @else
-                            <x-button.toggle   />
+                            <x-button.toggle id="toggle_{{ $detail->id }}" form="{{$detail->id}}" checked  />
                         @endif
                     </x-button.form>
 

@@ -2,7 +2,7 @@
 
 <!-- Component Start -->
 
-<input id="toggle_1" class="hidden" name="toggle" type="checkbox"  {{ $attributes }} >
+<input class="hidden" name="toggle" type="checkbox"  {{ $attributes }} >
 <label class="flex items-center justify-start w-10 border border-gray-500 h-6 p-1 rounded-full cursor-pointer" for="toggle_1">
     <span class="w-4 h-4 bg-black rounded-full"></span>
 </label>
@@ -11,9 +11,10 @@
 
 <script>
     $(document).ready(function (){
-        let toggleform = $('#toggleform');
+        let toggleform = $('[id^="form_"]');
+        let buttons = $('[id^="toggle_"]');
 
-        $('#toggle_1').on('click',function (){
+        $(buttons).on('click',function (){
             toggleform.submit()
         })
     });

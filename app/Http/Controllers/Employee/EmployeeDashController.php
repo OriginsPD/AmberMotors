@@ -2,6 +2,9 @@
 
 namespace App\Http\Controllers\Employee;
 
+use App\Actions\FavoriteCategoryAction;
+use App\Actions\ViewPastCustomerAction;
+use App\Charts\PopularBikeChart;
 use App\Http\Controllers\Controller;
 use App\Models\Bike\Bike_Brand;
 use App\Models\Bike\Bike_Category;
@@ -12,13 +15,16 @@ use Illuminate\View\View;
 
 class EmployeeDashController extends Controller
 {
-    public function index(): View
+    public function index(FavoriteCategoryAction $favoriteCategory): View
     {
 //        $categories = Bike_Category::all()->toArray();
 //        $brands = Bike_Brand::all()->toArray();
 
 //        $models = Rental::with('bike_details')->get()->toArray();
-//        dd($models[0]);
-        return view('Employee.index');
+
+        $chart_donuts = $favoriteCategory->execute();
+
+
+        return view('Employee.index',compact(['chart_donuts']));
     }
 }
