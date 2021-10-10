@@ -27,7 +27,7 @@
                     Table information
                 </div>
                 <x-sidebar-link href="{{ route('OwnerCustomer.Current.index') }}">Current Clients</x-sidebar-link>
-                <x-sidebar-link>Clients History </x-sidebar-link>
+                <x-sidebar-link href="{{ route('OwnerCustomer.Past.index') }}">Clients History </x-sidebar-link>
                 <x-sidebar-link>Penalty History</x-sidebar-link>
                 <div class="text-sm text-gray-500 m-2">
                     Vehicle Details
