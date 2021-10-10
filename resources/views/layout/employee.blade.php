@@ -13,7 +13,7 @@
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </head>
 <body>
-<x-modal :brands=" $brands = \App\Models\Bike\Bike_Brand::all()->toArray() "
+<x-modal.create :brands=" $brands = \App\Models\Bike\Bike_Brand::all()->toArray() "
          :catogries="$catogories = \App\Models\Bike\Bike_Category::all()->toArray()"/>
 
 @if(session()->has('success'))

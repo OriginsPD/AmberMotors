@@ -1,6 +1,6 @@
 <div id="model-bike"
      class=" items-center fixed hidden inset-0 z-50 px-5 bg-blue-200 bg-opacity-70 h-full w-full py-12 lg:px-20">
-    <div class="w-full bg-white px-5 mx-auto my-20  border rounded-lg shadow-xl lg:px-0 text-blueGray-500 lg:w-2/3"
+    <div class="w-full bg-white px-5 mx-auto my-20  border rounded-lg shadow-2xl lg:px-0 text-blueGray-500 lg:w-2/3"
          aria-hidden="false" aria-describedby="modalDescription" role="dialog">
         <div class="flex items-center justify-end px-6 py-4 ">
             <button id="close-bike"
@@ -15,11 +15,8 @@
                 </svg>
             </button>
         </div>
-        <div class="flex flex-col w-full mx-auto mb-2 border-b border-gray-500 text-left lg:px-20 lg:text-center">
-            <h2 class="mb-8 text-xs font-semibold tracking-widest text-black uppercase title-font">a great eader right
-                here </h2>
-            <h1 class="text-2xl font-semibold leading-none tracking-tighter text-black title-font"> A headline to switch
-                your visitors into users. </h1>
+        <div class="flex flex-col w-full mx-auto mb-2  text-left lg:px-20 lg:text-center">
+            <h1 class="text-2xl font-semibold leading-none tracking-tighter text-black title-font"> Offer The Bike Experience to Another </h1>
         </div>
         <!-- component -->
         <div class="p-5">
