@@ -22,6 +22,7 @@ class CreateBikeDetailsTable extends Migration
             $table->string('bike_model');
             $table->integer('rent_fee');
             $table->boolean('availability')->default(1);
+            $table->index(['category_id','brand_id','rent_fee']);
         });
     }
 

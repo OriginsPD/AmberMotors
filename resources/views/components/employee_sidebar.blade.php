@@ -1,7 +1,7 @@
 <div class=" md:flex md:flex-row border-r shadow-xl border-blue-500 min-h-screen bg-blueGray-50">
     <div class="flex flex-col flex-shrink-0  bg-white shadow-xl text-blueGray-700 md:w-64">
         <div class="flex flex-row items-center justify-between flex-shrink-0 py-4">
-            <a href="/" class="px-8 focus:outline-none">
+            <a href="{{ route('Owner.index') }}" class="px-8 focus:outline-none">
                 <div class="inline-flex items-center">
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-10 h-10 text-white p-2 bg-blue-500 rounded-full" viewBox="0 0 24 24">
                         <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path>
@@ -32,13 +32,14 @@
                 <div class="text-sm text-gray-500 m-2">
                     Vehicle Details
                 </div>
-                <x-sidebar-link href="{{ route('OwnerBike.index') }}">Vehicle Information</x-sidebar-link>
-                <x-sidebar-link>Information</x-sidebar-link>
+                <x-sidebar-link href="{{ route('OwnerBike.index') }}">Vehicle Listing</x-sidebar-link>
+                <x-sidebar-link>Active Status</x-sidebar-link>
                 <div class="text-sm text-gray-500 m-2">
                     Create / Edit
                 </div>
 
-                <x-sidebar-link-create id="create-bike" >Add Bike +</x-sidebar-link-create>
+                <x-sidebar-link-create id="create-bike" class="bg-blue-500 hover:bg-blue-600">Add Bike +</x-sidebar-link-create>
+
 
             </ul>
         </nav>
