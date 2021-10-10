@@ -1,4 +1,4 @@
-<form {{ $attributes }} id="toggleform" method="POST">
+<form {{ $attributes }} method="POST">
 @csrf
 @method('PUT')
     {{ $slot }}
