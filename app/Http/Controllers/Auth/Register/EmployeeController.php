@@ -33,7 +33,7 @@ class EmployeeController extends Controller
             ]);
 
             Employee::create([
-                'employee_nbr' =>  Auth::id(),
+                'employee_id' =>  Auth::id(),
                 'user_id' => Auth::id(),
             ]);
         }

@@ -15,7 +15,7 @@ class CreateEmployeesTable extends Migration
     {
         Schema::create('employees', function (Blueprint $table) {
             $table->id();
-            $table->string('employee_nbr');
+            $table->string('employee_id');
             $table->foreignId('user_id')->constrained('users','id');
             $table->boolean('active_flg')->default(0);
         });

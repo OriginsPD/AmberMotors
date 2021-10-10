@@ -26,7 +26,7 @@
                 <div class="text-sm text-gray-500 m-2">
                     Table information
                 </div>
-                <x-sidebar-link>Current Clients</x-sidebar-link>
+                <x-sidebar-link href="{{ route('OwnerCustomer.Current.index') }}">Current Clients</x-sidebar-link>
                 <x-sidebar-link>Clients History </x-sidebar-link>
                 <x-sidebar-link>Penalty History</x-sidebar-link>
                 <div class="text-sm text-gray-500 m-2">
