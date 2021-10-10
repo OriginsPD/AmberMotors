@@ -32,7 +32,7 @@
                 <div class="text-sm text-gray-500 m-2">
                     Vehicle Details
                 </div>
-                <x-sidebar-link>Vehicle Information</x-sidebar-link>
+                <x-sidebar-link href="{{ route('OwnerBike.index') }}">Vehicle Information</x-sidebar-link>
                 <x-sidebar-link>Information</x-sidebar-link>
                 <div class="text-sm text-gray-500 m-2">
                     Create / Edit
