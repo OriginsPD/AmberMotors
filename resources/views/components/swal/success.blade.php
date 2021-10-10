@@ -1,6 +1,5 @@
 <script>
 
-
     $(document).ready(function() {
         Swal.fire({
             title: "Added Successful",
