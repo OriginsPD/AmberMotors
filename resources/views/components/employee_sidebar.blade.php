@@ -1,4 +1,4 @@
-<div class=" md:flex md:flex-row border-r shadow-xl border-blue-500 md:min-h-screen bg-blueGray-50">
+<div class=" md:flex md:flex-row border-r shadow-xl border-blue-500 min-h-screen bg-blueGray-50">
     <div class="flex flex-col flex-shrink-0  bg-white shadow-xl text-blueGray-700 md:w-64">
         <div class="flex flex-row items-center justify-between flex-shrink-0 py-4">
             <a href="/" class="px-8 focus:outline-none">
