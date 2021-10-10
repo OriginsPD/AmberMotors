@@ -1,5 +1,8 @@
 <?php
 
+
+use App\Http\Controllers\Admin\AdminEmployeeController;
+use App\Http\Controllers\Admin\AdminUserController;
 use App\Http\Controllers\Admin\AdminController;
 use App\Http\Controllers\Auth\loginController;
 use App\Http\Controllers\Auth\Register\CustomerController;
@@ -59,6 +62,9 @@ Route::group(['as' => 'Owner'], function () {
 
 // Routes for the Admin Prokushxx Controller
 Route::resource('Admin', AdminController::class);
+Route::resource('AdminEmployee', AdminEmployeeController::class);
+Route::resource('AdminUser', AdminUserController::class);
+Route::get('Users',function(){return view('Admin.users');})->name('user');
 
 
 //Route For Logout
