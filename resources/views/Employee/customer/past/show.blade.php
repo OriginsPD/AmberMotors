@@ -20,7 +20,7 @@
                         <a class="flex-grow cursor-pointer hover:border-indigo-500 border-b-2 border-gray-300 py-2 text-lg px-1">Reviews</a>
                         <a class="flex-grow cursor-pointer hover:border-indigo-500 border-b-2 border-gray-300 py-2 text-lg px-1">Details</a>
                     </div>
-                    <p class="leading-relaxed mb-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur consequuntur deserunt eius fugiat id magnam non nostrum qui quisquam tempora.</p>
+                    <p class="leading-relaxed mb-4">Lorem ipsum dolor sitamet, consectetur adipisicing elit. Aspernatur consequuntur deserunt eius fugiat id magnam non nostrum qui quisquam tempora.</p>
                     <div class="flex border-t border-gray-200 py-2">
                         <span class="text-gray-500">Payment Status:</span>
                         <span class="ml-auto text-gray-900">{{ ($customer[0]['payment_status']) ? 'Paid' : 'Not Paid' }}</span>
