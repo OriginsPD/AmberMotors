@@ -32,17 +32,17 @@ class Rental extends Model
 
     public function users(): \Illuminate\Database\Eloquent\Relations\BelongsTo
     {
-        return $this->belongsTo(User::class);
+        return $this->belongsTo(User::class,'user_id');
     }
 
     public function employees(): \Illuminate\Database\Eloquent\Relations\BelongsTo
     {
-        return $this->belongsTo(Employee::class);
+        return $this->belongsTo(Employee::class,'employee_id',)->with(['users']);
     }
 
     public function bike_details(): \Illuminate\Database\Eloquent\Relations\BelongsTo
     {
-        return $this->belongsTo(Bike_Detail::class);
+        return $this->belongsTo(Bike_Detail::class,'bike_id');
     }
 
     public function payments(): \Illuminate\Database\Eloquent\Relations\HasMany
@@ -54,4 +54,5 @@ class Rental extends Model
     {
         return $this->hasMany(Penalty::class);
     }
+
 }

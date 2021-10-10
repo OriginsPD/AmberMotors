@@ -19,14 +19,14 @@ class Bike_Detail extends Model
     protected $fillable = [
         'category_id',
         'brand_id',
-        'employee_nbr',
+        'employee_id',
         'bike_model',
         'rent_fee',
     ];
 
     public function employees(): \Illuminate\Database\Eloquent\Relations\BelongsTo
     {
-        return $this->belongsTo(Employee::class,'employee_nbr','id');
+        return $this->belongsTo(Employee::class,'employee_id','id');
     }
 
     public function bike_brands(): \Illuminate\Database\Eloquent\Relations\BelongsTo
