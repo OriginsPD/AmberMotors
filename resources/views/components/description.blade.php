@@ -22,7 +22,7 @@
     </div>
     <div class="flex">
                         <span class="title-font font-medium text-2xl text-gray-900">
-                            Payment Fee: ${{ $customer[0]['payment_status'] }}
+                            Payment Fee: ${{ $customer[0]['payment_fee'] }}
                         </span>
     </div>
 </div>

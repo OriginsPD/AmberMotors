@@ -16,14 +16,14 @@
     <x-swal.success message="{{ session('success') }}" />
 @endif
 
-<div class="flex justify-start h-screen w-full">
+<div class="flex justify-start md:h-screen h-screen w-full">
     <div class=" h-screen">
         <x-employee_sidebar/>
     </div>
 
     <div class="w-screen h-screen overflow-y-auto">
         <x-employee_navi/>
-        <div class="">
+        <div class="bg-base-200">
             @yield('content')
         </div>
     </div>

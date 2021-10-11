@@ -1,4 +1,4 @@
-<header class="text-gray-600 shadow-xl z-20 bg-white sticky top-0 left-0 border-b border-blue-500 body-font">
+<header class="text-gray-600 z-10 bg-yellow-600 sticky top-0 h-18 left-0 border-b border-yellow-600 body-font">
     <div class=" mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
 
         <nav class="md:ml-auto flex flex-wrap items-center text-base justify-center">

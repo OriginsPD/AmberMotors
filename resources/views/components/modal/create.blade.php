@@ -1,6 +1,6 @@
 <div id="model-bike"
-     class=" items-center fixed hidden inset-0 z-50 px-5 bg-blue-200 bg-opacity-70 h-full w-full py-12 lg:px-20">
-    <div class="w-full bg-white px-5 mx-auto my-10  border rounded-lg shadow-2xl lg:px-0 text-blueGray-500 lg:w-2/3"
+     class=" items-center fixed hidden inset-0 z-50 px-5 bg-blue-200 bg-opacity-95 h-full w-full py-12 lg:px-20">
+    <div class="w-full bg-white px-5 -mt-8 mx-auto border rounded-lg shadow-2xl lg:px-0 text-blueGray-500 lg:w-2/3"
          aria-hidden="false" aria-describedby="modalDescription" role="dialog">
         <div class="flex items-center justify-end px-6 py-4 ">
             <button id="close-bike"
@@ -16,13 +16,14 @@
             </button>
         </div>
         <div class="flex flex-col w-full mx-auto mb-2  text-left lg:px-20 lg:text-center">
-            <h1 class="text-2xl font-semibold leading-none tracking-tighter text-black title-font"> Offer The Bike Experience to Another </h1>
+            <h1 class="text-2xl font-semibold leading-none tracking-tighter text-black title-font"> Offer The Bike
+                Experience to Another </h1>
         </div>
         <!-- component -->
         <div class="p-5">
             <x-form.index action="{{ route('OwnerBike.store') }}">
                 <x-form.heading message="Bike Information">
-                    <div>
+                    <div class="m-1">
                         <x-form.select name="brand_id">
                             <x-form.option selected disabled> Select Brand</x-form.option>
                             @forelse($brands as $brand)
@@ -38,7 +39,7 @@
                         </div>
                     </div>
 
-                    <div>
+                    <div class="m-1">
                         <x-form.select name="category_id">
                             <x-form.option selected disabled> Select Category</x-form.option>
                             @forelse($catogries as $category)
@@ -55,9 +56,9 @@
                         </div>
                     </div>
 
-                    <div>
+                    <div class="m-1">
                         <x-form.input name="bike_model" placeholder="Bike Model"/>
-                        <div class="my-2 text-red-600 ml-8 text-xs">
+                        <div class="mb-1 text-red-600 ml-8 text-xs">
                             @error('bike_model')
                             *{{ $message }}
                             @enderror
@@ -66,13 +67,20 @@
 
                 </x-form.heading>
 
-                <x-form.heading message="Bike Image">
+                <x-form.heading class="flex flex-col md:flex-row" message="Bike Image">
 
-                    <x-form.upload />
+                    <div class="m-1">
+                        <x-form.upload name="image" class="hidden" />
+                        <div class="my-2 text-red-600 ml-8 text-xs">
+                            @error('image')
+                            *{{ $message }}
+                            @enderror
+                        </div>
+                    </div>
 
                 </x-form.heading>
 
-                <x-form.heading message="Fee Information">
+                <x-form.heading class="flex flex-col md:flex-row" message="Fee Information">
 
                     <div class="flex">
                         <x-form.input-icon type="number" name="rent_fee" placeholder="Rental Fees"/>
