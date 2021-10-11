@@ -3,7 +3,7 @@
 @section('page_title','Current Customers')
 
 @section('content')
-    <x-head class="text-center mt-2">Current Customer Details</x-head>
+    <x-head class="text-center font-bold mt-2">Current Customer Details</x-head>
     <div class="flex container mx-auto mt-20 flex-col">
         <div class="-my-2 overflow-x-auto ">
 
@@ -25,7 +25,7 @@
                         <x-table.cell>{{ $customer['bike_details']['bike_model'] }}</x-table.cell>
                         <x-table.cell>{{ $customer['rental_start_date'] }}</x-table.cell>
                         <x-table.cell>{{ $customer['rental_end_date'] }}</x-table.cell>
-                        <x-table.cell-edit href="#"> View </x-table.cell-edit>
+                        <x-table.cell-edit href="{{ route('OwnerCustomer.Past.show',$customer['id']) }}"> View </x-table.cell-edit>
                     </x-table.row>
                 @empty
                     <x-table.row>

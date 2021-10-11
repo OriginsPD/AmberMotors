@@ -22,6 +22,7 @@ class Bike_Detail extends Model
         'employee_id',
         'bike_model',
         'rent_fee',
+        'image_path',
     ];
 
     public function employees(): \Illuminate\Database\Eloquent\Relations\BelongsTo
