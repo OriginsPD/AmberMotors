@@ -57,7 +57,7 @@
                     </div>
 
                     <div class="m-1">
-                        <x-form.input name="bike_model" placeholder="Bike Model"/>
+                        <x-form.input name="bike_model"  placeholder="Bike Model"/>
                         <div class="mb-1 text-red-600 ml-8 text-xs">
                             @error('bike_model')
                             *{{ $message }}
