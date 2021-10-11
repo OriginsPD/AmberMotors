@@ -3,11 +3,12 @@
 namespace App\Http\Controllers\Employee;
 
 use App\Actions\AddBikeInfoAction;
+use App\Actions\AllBrandsAction;
+use App\Actions\AllCategoryAction;
 use App\Actions\ToggleActiveAction;
 use App\Actions\ViewBikeDetailsAction;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\AddBike;
-use App\Models\Bike\Bike_Detail;
 use Illuminate\Http\Request;
 use Illuminate\View\View;
 
@@ -31,10 +32,18 @@ class BikeInfoController extends Controller
         return back()->with('success', 'Bike Information Added Successful');
     }
 
-    public function update($id, ToggleActiveAction $ToggleAvailabilityAction): \Illuminate\Http\RedirectResponse
+    public function show($id, AllBrandsAction $BrandAction, AllCategoryAction $CategoryAction)
     {
-        $ToggleAvailabilityAction->execute($id);
-        return back();
+        $brands = $BrandAction->execute();
+        $catogries = $CategoryAction->execute();
+
+        return view('Employee.customer.show',compact(['brands','catogries']));
     }
+
+//    public function update($id, ): \Illuminate\Http\RedirectResponse
+//    {
+//
+//        return back();
+//    }
 
 }

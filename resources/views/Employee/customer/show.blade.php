@@ -1,23 +1,16 @@
-<div id="model-bike"
-     class=" items-center fixed hidden inset-0 z-50 px-5 bg-blue-200 bg-opacity-95 h-full w-full py-12 lg:px-20">
-    <div class="w-full bg-white px-5 -mt-8 mx-auto border rounded-lg shadow-2xl lg:px-0 text-blueGray-500 lg:w-2/3"
+@extends('layout.employee')
+
+@section('page_title','Edit Bike Information')
+
+@section('content')
+
+    <div class="w-full bg-white px-5 mx-auto border rounded-lg shadow-2xl lg:px-0 text-blueGray-500 lg:w-2/3"
          aria-hidden="false" aria-describedby="modalDescription" role="dialog">
         <div class="flex items-center justify-end px-6 py-4 ">
-            <button id="close-bike"
-                    class="p-1 transition-colors duration-200 transform rounded-md hover:bg-opacity-25 hover:bg-blueGray-600 focus:outline-none"
-                    type="button" aria-label="Close" aria-hidden="true">
-                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-circle-x" width="24"
-                     height="24" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none"
-                     stroke-linecap="round" stroke-linejoin="round">
-                    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-                    <circle cx="12" cy="12" r="9"></circle>
-                    <path d="M10 10l4 4m0 -4l-4 4"></path>
-                </svg>
-            </button>
+
         </div>
         <div class="flex flex-col w-full mx-auto mb-2  text-left lg:px-20 lg:text-center">
-            <h1 class="text-2xl font-semibold leading-none tracking-tighter text-black title-font"> Offer The Bike
-                Experience to Another </h1>
+            <x-head class="text-center font-bold mt-2 w-full">Edit Bike Information</x-head>
         </div>
         <!-- component -->
         <div class="p-5">
@@ -95,13 +88,5 @@
             </x-form.index>
         </div>
     </div>
-</div>
 
-<script>
-    $(document).ready(function () {
-        $("#close-bike").on('click', function () {
-            $('#model-bike').fadeToggle("slow");
-        });
-
-    });
-</script>
+@endsection

@@ -53,7 +53,6 @@
                             @endif
 
                         </x-table.cell-edit>
-                        <x-table.cell-edit class="text-center w-full">Edit</x-table.cell-edit>
                     </x-table.row>
                 @empty
                     <x-table.row>
