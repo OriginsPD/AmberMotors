@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
+use App\Models\Bike\Bike_Category;
 use Illuminate\Http\Request;
 
 class AdminCategoryController extends Controller
@@ -22,11 +23,16 @@ class AdminCategoryController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
+    public function create(Request $req)
     {
-        
+        Bike_Category::create([
+          'brand_id'=>$req->brand_id,
+          'category_nm'=>$req->category,
+        ]);
+        return redirect()->back();
     }
 
+    
     /**
      * Store a newly created resource in storage.
      *

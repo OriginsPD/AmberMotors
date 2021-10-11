@@ -41,7 +41,7 @@ require __DIR__ . '/Owner/Owner.php';
 Route::resource('Admin', AdminController::class);
 Route::get('Users',function(){return view('Admin.users');})->name('user');
 Route::resource('AdminEmployee', AdminEmployeeController::class);
-Route::resource('AdminEmployee', AdminCategoryController::class);
+Route::resource('AdminCategory', AdminCategoryController::class);
 Route::resource('AdminUser', AdminUserController::class);
 
 
