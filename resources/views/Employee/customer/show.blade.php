@@ -4,7 +4,7 @@
 
 @section('content')
 
-    <div class="w-full bg-white px-5 mx-auto border rounded-lg shadow-2xl lg:px-0 text-blueGray-500 lg:w-2/3"
+    <div class="w-full bg-white px-5 mx-auto rounded-lg lg:px-0 text-blueGray-500 lg:w-2/3"
          aria-hidden="false" aria-describedby="modalDescription" role="dialog">
         <div class="flex items-center justify-end px-6 py-4 ">
 
@@ -13,8 +13,8 @@
             <x-head class="text-center font-bold mt-2 w-full">Edit Bike Information</x-head>
         </div>
         <!-- component -->
-        <div class="p-5">
-            <x-form.index action="{{ route('OwnerBike.store') }}">
+        <div class="p-5 -mt-8">
+            <x-form.update action="{{ route('OwnerBike.update',$bike_info->id) }}">
                 <x-form.heading message="Bike Information">
                     <div class="m-1">
                         <x-form.select name="brand_id">
@@ -35,7 +35,7 @@
                     <div class="m-1">
                         <x-form.select name="category_id">
                             <x-form.option selected disabled> Select Category</x-form.option>
-                            @forelse($catogries as $category)
+                            @forelse($categories as $category)
                                 <x-form.option value="{{ $category['id'] }}">
                                     {{ $category['category_nm'] }}</x-form.option>
                             @empty
@@ -50,7 +50,9 @@
                     </div>
 
                     <div class="m-1">
-                        <x-form.input name="bike_model" placeholder="Bike Model"/>
+                        <x-form.input name="bike_model"
+                                      value="{{ $bike_info->bike_model }}"
+                                      placeholder="Bike Model"/>
                         <div class="mb-1 text-red-600 ml-8 text-xs">
                             @error('bike_model')
                             *{{ $message }}
@@ -76,7 +78,9 @@
                 <x-form.heading class="flex flex-col md:flex-row" message="Fee Information">
 
                     <div class="flex">
-                        <x-form.input-icon type="number" name="rent_fee" placeholder="Rental Fees"/>
+                        <x-form.input-icon type="number" name="rent_fee"
+                                           value="{{ $bike_info->rent_fee }}"
+                                           placeholder="Rental Fees"/>
                         <div class="my-2 text-red-600 ml-8 text-xs">
                             @error('rent_fee')
                             *{{ $message }}
@@ -85,7 +89,7 @@
                     </div>
 
                 </x-form.heading>
-            </x-form.index>
+            </x-form.update>
         </div>
     </div>
 
