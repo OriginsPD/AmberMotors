@@ -31,7 +31,7 @@ class BikeInfoController extends Controller
         return back()->with('success', 'Bike Information Added Successful');
     }
 
-    public function update($id, ToggleAvailabilityAction $ToggleAvailabilityAction)
+    public function update($id, ToggleAvailabilityAction $ToggleAvailabilityAction): \Illuminate\Http\RedirectResponse
     {
         $ToggleAvailabilityAction->execute($id);
         return back();

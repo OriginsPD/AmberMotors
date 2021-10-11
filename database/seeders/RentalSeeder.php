@@ -32,19 +32,19 @@ class RentalSeeder extends Seeder
 //        ];
 
         $users = User::all()->toArray();
-        $bikeID = [1,2,3,4,5,6,7,8,9,10];
+        $bikeIDs = [1,2,3,4,5];
 
-        foreach ($users as $user){
+        foreach ($bikeIDs as $bikeID){
         Rental::create([
-            'user_id' => $bikeID[$users[0]['id']],
+            'user_id' => $bikeID,
             'employee_id' => 1,
-            'bike_id' => $bikeID[$users[0]['id']],
+            'bike_id' => $bikeID,
             'payment_fee' => 5000,
             'payment_status' => random_int(0,1),
             'rent_status' => random_int(0,1),
             'rental_start_date' => Carbon::today('Jamaica'),
             'rental_end_date' => Carbon::tomorrow('Jamaica'),
-            'return_date' => Carbon::tomorrow('Jamaica'),
+            'return_date' => Carbon::parse(Carbon::today('Jamaica'))->nextWeekday(),
         ]);
     }
 
