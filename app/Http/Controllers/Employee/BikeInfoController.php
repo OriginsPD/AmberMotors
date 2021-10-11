@@ -3,7 +3,7 @@
 namespace App\Http\Controllers\Employee;
 
 use App\Actions\AddBikeInfoAction;
-use App\Actions\ToggleAvailabilityAction;
+use App\Actions\ToggleActiveAction;
 use App\Actions\ViewBikeDetailsAction;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\AddBike;
@@ -31,7 +31,7 @@ class BikeInfoController extends Controller
         return back()->with('success', 'Bike Information Added Successful');
     }
 
-    public function update($id, ToggleAvailabilityAction $ToggleAvailabilityAction): \Illuminate\Http\RedirectResponse
+    public function update($id, ToggleActiveAction $ToggleAvailabilityAction): \Illuminate\Http\RedirectResponse
     {
         $ToggleAvailabilityAction->execute($id);
         return back();
