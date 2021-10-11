@@ -1,0 +1,25 @@
+.active{
+    color: rgb(99, 102, 241);
+    border-bottom-width: 2px;
+    flex-grow: 1;
+    cursor: pointer;
+    --tw-border-opacity: 1;
+    border-color: rgba(99, 102, 241, var(--tw-border-opacity));
+    font-size: 1.125rem;
+    line-height: 1.75rem;
+    padding: 0.5rem 0.25rem;
+
+}
+
+.deactivate{
+    color: gray;
+    border-bottom-width: 2px;
+    flex-grow: 1;
+    cursor: pointer;
+    --tw-border-opacity: 1;
+    border-color: rgb(157, 157, 157, var(--tw-border-opacity));
+    font-size: 1.125rem;
+    line-height: 1.75rem;
+    padding: 0.5rem 0.25rem;
+
+}

@@ -6,10 +6,27 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Employee | @yield('page_title')</title>
-    <link rel="stylesheet" href="{{ mix('css/app.css') }}">
+    <x-Links.Link />
 </head>
 <body>
-<x-employee_navi />
-@yield('content')
+<x-modal.create :brands=" $brands = \App\Models\Bike\Bike_Brand::all()->toArray() "
+         :catogries="$catogories = \App\Models\Bike\Bike_Category::all()->toArray()"/>
+
+@if(session()->has('success'))
+    <x-swal.success message="{{ session('success') }}" />
+@endif
+
+<div class="flex justify-start md:h-screen h-screen w-full">
+    <div class=" h-screen">
+        <x-employee_sidebar/>
+    </div>
+
+    <div class="w-screen h-screen overflow-y-auto">
+        <x-employee_navi/>
+        <div class="bg-base-200">
+            @yield('content')
+        </div>
+    </div>
+</div>
 </body>
 </html>

@@ -9,6 +9,8 @@ class Bike_Category extends Model
 {
     use HasFactory;
 
+    public $table = 'bike_categories';
+
     public $timestamps = false;
 
     protected $fillable = [

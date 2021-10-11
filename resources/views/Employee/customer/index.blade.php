@@ -3,9 +3,9 @@
 @section('page_title','Customer List')
 
 @section('content')
-    <x-head class="text-center mt-2 w-full">Customer Details</x-head>
+    <x-head class="text-center mt-2">Customer Details</x-head>
     <div class="flex container mx-auto mt-20 flex-col">
-        <div class="-my-2 overflow-x-auto sm:-mx-6 lg:-mx-8">
+        <div class="-my-2 overflow-x-auto ">
 
             <x-table>
                 <x-slot name="heading">
