@@ -26,21 +26,34 @@
                         <x-table.cell>{{ $detail['bike_model'] }}</x-table.cell>
                         <x-table.cell
                             class="text-center">{{ ($detail['active_flg'] === 1) ? 'Yes' : 'No'  }}</x-table.cell>
-                        <x-table.cell-edit class="text-center w-full">Edit</x-table.cell-edit>
+
                         <x-table.cell-edit>
 
-                            <form action="{{ route('OwnerStatus.update',$detail['id']) }}"
-                                  method="POST" name="{{ $detail['id'] }}">
-                                @csrf
-                                @method('PUT')
-                                <select name="status" id="status"
-                                        class="text-center px-4 py-2 form-select border border-gray-300 block w-full mt-1">
-                                    <option onclick="(this.submit('#{{ $detail['id'] }}'))" value="1">Active</option>
-                                    <option onclick="(this.submit())" value="0">Deactivate</option>
-                                </select>
-                            </form>
+                            @if($detail['availability'])
+                                <form action="{{ route('OwnerStatus.update',$detail['id']) }}"
+                                      method="POST" id="{{ $detail['id'] }}">
+                                    @csrf
+                                    @method('PUT')
+
+                                    <a class="text-center px-4 py-2 cursor-pointer  block w-full mt-1"
+                                       onclick="document.getElementById('{{ $detail['id'] }}').submit()">
+                                        @if($detail['active_flg'])
+                                            <label class="switch">
+                                                <input type="checkbox" checked>
+                                                <span class="slider round"></span>
+                                            </label>
+                                        @else
+                                            <label class="switch">
+                                                <input type="checkbox">
+                                                <span class="slider round"></span>
+                                            </label>
+                                        @endif
+                                    </a>
+                                </form>
+                            @endif
 
                         </x-table.cell-edit>
+                        <x-table.cell-edit class="text-center w-full">Edit</x-table.cell-edit>
                     </x-table.row>
                 @empty
                     <x-table.row>

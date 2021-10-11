@@ -1,5 +1,6 @@
 <link rel="stylesheet" href="{{ mix('css/app.css') }}">
 <link rel="stylesheet" href="{{ asset('css/toggle.css') }}">
+<link rel="stylesheet" href="{{ asset('css/active.css') }}">
 
 <script defer src="{{ asset('js/upload.js') }}"></script>
 

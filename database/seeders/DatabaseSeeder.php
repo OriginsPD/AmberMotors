@@ -18,7 +18,8 @@ class DatabaseSeeder extends Seeder
             rolesSeeder::class,
             BrandSeeder::class,
             CategorySeeder::class,
-            RentalSeeder::class,
+//            RentalSeeder::class,
+            CustomerSeeder::class
         ]);
     }
 }
