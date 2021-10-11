@@ -25,7 +25,7 @@
 
 
 
-                <img alt="ecommerce" class="lg:w-1/2 w-full lg:h-auto h-64 object-cover object-center rounded" src="https://dummyimage.com/400x400">
+                <img alt="ecommerce" class="lg:w-1/2 w-full lg:h-auto h-64 object-cover object-center rounded" src="{{ $customer[0]['bike_details']['image_path'] }}">
             </div>
         </div>
     </section>

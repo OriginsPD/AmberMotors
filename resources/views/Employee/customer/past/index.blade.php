@@ -3,7 +3,7 @@
 @section('page_title','Past Customers')
 
 @section('content')
-    <x-head class="text-center mt-2">Past Customer History</x-head>
+    <x-head class="text-center font-bold mt-2">Past Customer History</x-head>
     <div class="flex container mx-auto mt-20 flex-col">
         <div class="-my-2 overflow-x-auto ">
 
