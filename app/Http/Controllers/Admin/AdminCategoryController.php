@@ -2,12 +2,10 @@
 
 namespace App\Http\Controllers\Admin;
 
-use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
-use Illuminate\Support\Facades\DB;
+use Illuminate\Http\Request;
 
-
-class AdminEmployeeController extends Controller
+class AdminCategoryController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -16,13 +14,7 @@ class AdminEmployeeController extends Controller
      */
     public function index()
     {
-      $employees = DB::table('users')
-      ->join('role_user','role_user.user_id','=','users.id')
-      ->select('*')
-      ->where('role_user.role_id','=','2')
-      ->get();
-
-      return view('Admin.Employee.index',['employees'=>$employees]);
+        //
     }
 
     /**
@@ -32,7 +24,7 @@ class AdminEmployeeController extends Controller
      */
     public function create()
     {
-        //
+        
     }
 
     /**
@@ -77,10 +69,7 @@ class AdminEmployeeController extends Controller
      */
     public function update(Request $request, $id)
     {
-      $user = User::find($id);
-      $user->Active_flag = $request->activate;
-      $user->update();
-      return redirect()->back();
+        //
     }
 
     /**
@@ -89,11 +78,8 @@ class AdminEmployeeController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Request $req,$id)
+    public function destroy($id)
     {
-      $user = User::find($id);
-      $user->Active_flag = $req->deactivate;
-      $user->update();
-      return redirect()->back();
+        //
     }
 }

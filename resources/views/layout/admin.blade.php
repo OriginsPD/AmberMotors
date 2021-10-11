@@ -52,7 +52,7 @@
             </ul>
         </nav>
     </div>
-    <div class="flex justify-center bg-gradient-to-tr w-full">
+    <div class=" justify-center bg-gradient-to-tr w-full">
         @yield('content')
     </div>
 </div>

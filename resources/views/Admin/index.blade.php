@@ -24,7 +24,7 @@
     <table class="text-left w-full border-collapse"> <!--Border collapse doesn't work on this site yet but it's available in newer tailwind versions -->
       <thead>
         <tr>
-          <th class="py-4 px-6 bg-grey-lightest font-bold uppercase text-sm text-grey-dark border-b border-grey-light">City</th>
+          <th class="py-4 px-6 bg-grey-lightest font-bold uppercase text-sm text-grey-dark border-b border-grey-light">Bike Name</th>
           <th class="py-4 px-6 bg-grey-lightest font-bold uppercase text-sm text-grey-dark border-b border-grey-light">Actions</th>
         </tr>
       </thead>
@@ -38,6 +38,7 @@
               @csrf
               @method('DELETE')
               <button class="bg-red-500 text-grey-lighter font-bold py-1 px-3 rounded text-xs bg-blue hover:bg-blue-dark">Delete</button>
+              <button class="bg-green-500 text-grey-lighter font-bold py-1 px-3 rounded text-xs bg-blue hover:bg-blue-dark"><a href="{{ route('Admin.show',$brand->id) }}"> View Categories</a></button>
               </form>
           </td>
         </tr>
