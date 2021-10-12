@@ -1,26 +1,52 @@
 @extends('layout.admin')
 
 @section('content')
-    <section class="text-gray-600 body-font">
-        <div class="container px-5 py-24 mx-auto">
-            <div class="flex flex-wrap -m-4 text-center">
-                <div class="p-4 sm:w-1/4 w-1/2">
-                    <h2 class="title-font font-medium sm:text-4xl text-3xl text-gray-900">2.7K</h2>
-                    <p class="leading-relaxed text-black">Users</p>
-                </div>
-                <div class="p-4 sm:w-1/4 w-1/2">
-                    <h2 class="title-font font-medium sm:text-4xl text-3xl text-gray-900">1.8K</h2>
-                    <p class="leading-relaxed text-black">Subscribes</p>
-                </div>
-                <div class="p-4 sm:w-1/4 w-1/2">
-                    <h2 class="title-font font-medium sm:text-4xl text-3xl text-gray-900">35</h2>
-                    <p class="leading-relaxed text-black">Employees</p>
-                </div>
-                <div class="p-4 sm:w-1/4 w-1/2">
-                    <h2 class="title-font font-medium sm:text-4xl text-3xl text-gray-900">4</h2>
-                    <p class="leading-relaxed text-black">Products</p>
-                </div>
-            </div>
-        </div>
-    </section>
+
+
+
+<section class="">
+  <div class="ml-20 mx-auto bg-red-500 mt-20 max-h-0">
+    <h5 class="text-white font-bold max-w-xl">Add A Brand</h5>
+  <form action="{{ route('Admin.create') }}" method="get">
+    <span class="text-red-600 font-semibold">@error('brand')
+      {{ $message }}
+    @enderror</span><br>
+  <div class=" flex flex-col rounded-lg overflow-hidden sm:flex-row max-h-16">
+    <input class="py-3 px-4 bg-gray-200 text-gray-800 border-gray-300 border-2 outline-none placeholder-gray-500 focus:bg-gray-100" type="text" name="brand" placeholder="Enter brand" required>
+    <button type="submit" class="py-3 px-4 bg-gray-700 text-gray-100 font-semibold uppercase hover:bg-gray-600">Go</button>
+  </div>
+  </form>
+  </div> 
+</section>
+<!-- component -->
+  <!-- component -->
+<div class="w-2/3 mx-auto mt-40 mr-24">
+  <div class="bg-white shadow-md rounded my-6">
+    <table class="text-left w-full border-collapse"> <!--Border collapse doesn't work on this site yet but it's available in newer tailwind versions -->
+      <thead>
+        <tr>
+          <th class="py-4 px-6 bg-grey-lightest font-bold uppercase text-sm text-grey-dark border-b border-grey-light">City</th>
+          <th class="py-4 px-6 bg-grey-lightest font-bold uppercase text-sm text-grey-dark border-b border-grey-light">Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        @foreach ($brands as $brand)
+        <tr class="hover:bg-grey-lighter">
+          <td class="py-4 px-6 border-b border-grey-light">{{ $brand->brand_nm }}</td>
+          <td class="py-4 px-6 border-b border-grey-light">
+              
+            <form action="{{ route('Admin.destroy',$brand->id) }}" method="POST">
+              @csrf
+              @method('DELETE')
+              <button class="bg-red-500 text-grey-lighter font-bold py-1 px-3 rounded text-xs bg-blue hover:bg-blue-dark">Delete</button>
+              </form>
+          </td>
+        </tr>
+        @endforeach
+      </tbody>
+    </table>
+  </div>
+</div>
+<!-- component -->
+
 @endsection
