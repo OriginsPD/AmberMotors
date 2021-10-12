@@ -12,22 +12,31 @@ class CategorySeeder extends Seeder
      *
      * @return void
      */
-    public function run(): void
+    public function run()
     {
         $categorys = [
-            'Commuter.',
-            'Cruiser.',
-            'Moped.',
-            'Naked.',
-            'OffRoad.',
-            'Scooter.',
-            'Sports.'
+            'Road bikes',
+            'Mountain bikes',
+            'TVS Hero Moto Corp',
+            'Hybrid/commuter bikes',
+            'Cyclocross bikes'
+        ];
+
+        $brand = [
+          'BMW',
+          'Mitsubishi',
+          'Honda',
+          'Toyota',
+          'Nissan',
         ];
 
         foreach ($categorys as $category) {
-            Bike_Category::create([
-                'category_nm' => $category,
-            ]);
+
+          Bike_Category::create([
+            'category_nm' => $category,
+            'brand_id'=>rand(1,8),  
+          ]);
         }
+      
     }
 }

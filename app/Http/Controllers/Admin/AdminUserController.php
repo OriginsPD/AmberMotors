@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Admin;
 
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use App\Models\Payment\Rental;
 use App\Models\User;
 use App\Models\Role;
 use App\Models\role_user;
@@ -19,7 +20,8 @@ class AdminUserController extends Controller
      */
     public function index(): View
     {
-
+      // $buyers = Role::with('users')->get()->toArray();
+      // dd($buyers[0]['users'][0]['pivot']['role_id']);
       $buyers = DB::table('users')
       ->join('role_user','role_user.user_id','=','users.id')
       ->select('*')
@@ -58,7 +60,20 @@ class AdminUserController extends Controller
      */
     public function show($id)
     {
-        //
+      $customerrental = DB::table('rentals')
+      ->join('users','users.id','=','rentals.user_id')
+      ->join('employees','employees.id','=','rentals.employee_id')
+      ->join('bike_details','bike_details.id','=','rentals.bike_id')
+      ->select('*') 
+      ->where('rentals.user_id',$id)
+      ->get();
+
+      // $customerrental = Rental::with('users')->where('user_id',$id)->get();
+
+      // dd($customerrental);
+
+
+        return view('Admin.Users.show',['customerrental'=>$customerrental]);
     }
 
     /**
@@ -79,9 +94,12 @@ class AdminUserController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $req, $id)
     {
-        //
+      $user = User::find($id);
+      $user->Active_flag = $req->activate;
+      $user->update();
+      return redirect()->back();
     }
 
     /**
@@ -90,8 +108,11 @@ class AdminUserController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(Request $req,$id)
     {
-        //
+      $user = User::find($id);
+      $user->Active_flag = $req->deactivate;
+      $user->update();
+      return redirect()->back();
     }
 }
