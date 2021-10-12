@@ -9,6 +9,7 @@ use App\Actions\ShowSelectBikeAction;
 use App\Actions\ToggleActiveAction;
 use App\Actions\UpdateBikeAction;
 use App\Actions\ViewBikeDetailsAction;
+use App\Actions\ViewClientPenaltyAction;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\AddBike;
 use Illuminate\Http\Request;

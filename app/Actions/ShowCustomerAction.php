@@ -9,11 +9,13 @@ class ShowCustomerAction
 {
     public function execute($id): array
     {
-        //        dd($customers);
 
-        return Rental::with('employees', 'users', 'bike_details')
-            ->where('employee_id', Auth::id())
+         return Rental::with(['employees','users','bike_details','penalties' => static function($query){
+            $query->where('penalty_amount','>',0);
+        }])
+            ->where('employee_id',Auth::id())
             ->where('id',$id)
             ->get()->toArray();
+
     }
 }
