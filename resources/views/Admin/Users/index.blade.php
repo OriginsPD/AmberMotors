@@ -46,7 +46,9 @@
                 @endforeach
             </x-table>
 
+
         </div>
     </div>
+
 
 @endsection

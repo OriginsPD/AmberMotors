@@ -77,10 +77,12 @@ class AdminEmployeeController extends Controller
      */
     public function update(Request $request, $id)
     {
+
       $user = User::find($id);
       $user->Active_flag = $request->activate;
       $user->update();
       return redirect()->back();
+
     }
 
     /**
@@ -91,9 +93,11 @@ class AdminEmployeeController extends Controller
      */
     public function destroy(Request $req,$id)
     {
+
       $user = User::find($id);
       $user->Active_flag = $req->deactivate;
       $user->update();
       return redirect()->back();
+
     }
 }
