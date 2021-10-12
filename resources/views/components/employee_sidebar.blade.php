@@ -60,5 +60,7 @@
             $('#model-bike').fadeToggle("slow");
         });
 
+
+
     });
 </script>
