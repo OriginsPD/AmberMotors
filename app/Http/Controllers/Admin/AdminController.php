@@ -16,6 +16,7 @@ class AdminController extends Controller
   {
     $brands = Bike_Brand::all();
     return view('Admin.index', ['brands' => $brands]);
+
   }
 
   public function create(Brand $request)

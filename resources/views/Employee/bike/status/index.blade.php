@@ -13,9 +13,7 @@
                     <x-table.heading>Brand</x-table.heading>
                     <x-table.heading>Model</x-table.heading>
                     <x-table.heading>Active Status</x-table.heading>
-                    <x-table.heading class="text-right"></x-table.heading>
                     <x-table.heading class="text-center">Actions</x-table.heading>
-                    <x-table.heading_view colspan="2"></x-table.heading_view>
 
                 </x-slot>
                 @forelse ($details as $detail)
@@ -56,7 +54,7 @@
                     </x-table.row>
                 @empty
                     <x-table.row>
-                        <x-table.cell colspan="5" class='text-center'> No Bike Detail Found</x-table.cell>
+                        <x-table.cell colspan="5" class='text-center font-bold'> No Bike Detail Found</x-table.cell>
                     </x-table.row>
                 @endforelse
             </x-table.index>
@@ -64,9 +62,4 @@
         </div>
     </div>
 
-    <script>
-        $(document).ready(function () {
-            $('#1').PopO({})
-        });
-    </script>
 @endsection

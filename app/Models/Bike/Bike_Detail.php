@@ -12,7 +12,7 @@ class Bike_Detail extends Model
 {
     use HasFactory;
 
-    public $table = 'bike_details';
+    protected $table = 'bike_details';
 
     public $timestamps = false;
 
@@ -42,7 +42,7 @@ class Bike_Detail extends Model
 
     public function rentals(): \Illuminate\Database\Eloquent\Relations\HasMany
     {
-        return $this->hasMany(Rental::class);
+        return $this->hasMany(Rental::class,'bike_id')->with('users');
     }
 
 }

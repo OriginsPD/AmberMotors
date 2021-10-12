@@ -18,11 +18,17 @@ class DatabaseSeeder extends Seeder
             rolesSeeder::class,
             BrandSeeder::class,
             CategorySeeder::class,
+
             UserRolesSeeder::class,
             employeeseeder::class,
             // BikeDetailSeeder::class,
           //  RentalSeeder::class,
             // CustomerSeeder::class
+
+           // CustomerSeeder::class,
+//            RentalSeeder::class,
+        PenaltySeeder::class
+
         ]);
     }
 }

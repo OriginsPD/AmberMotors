@@ -18,7 +18,7 @@
         </x-slot>
         @forelse ($details as $detail)
             <x-table.row>
-                <x-table.cell-profile id="{{ $detail['id'] }}" src="{{ $detail['image_path'] }}" />
+                <x-table.cell-profile id="{{ $detail['id'] }}" src="{{ $detail['image_path'] }}"/>
                 <x-table.cell>{{ $detail['bike_category']['category_nm'] }}</x-table.cell>
                 <x-table.cell>{{ $detail['bike_brands']['brand_nm'] }}</x-table.cell>
                 <x-table.cell>{{ $detail['bike_model'] }}</x-table.cell>
@@ -28,7 +28,12 @@
                     {{ ($detail['availability'] === 1) ? 'Yes' : 'No'  }}
                 </x-table.cell>
 
-                <x-table.cell-edit href="{{ route('OwnerBike.show',$detail['id']) }}" class="text-center cursor-pointer w-full">View</x-table.cell-edit>
+                @if($detail['availability'])
+                    <x-table.cell-edit href="{{ route('OwnerBike.show',$detail['id']) }}"
+                                       class="text-center cursor-pointer w-full">
+                        Edit</x-table.cell-edit>
+                @endif
+
             </x-table.row>
         @empty
             <x-table.row>

@@ -19,19 +19,7 @@ class RentalSeeder extends Seeder
      */
     public function run(): void
     {
-//        $rental = [
-//            'user_id',
-//            'employee_nbr',
-//            'bike_id',
-//            'payment_fee',
-//            'payment_status',
-//            'rent_status',
-//            'rental_start_date',
-//            'rental_end_date',
-//            'return_date',
-//        ];
 
-        $users = User::all()->toArray();
         $bikeIDs = [1,2,3,4,5];
 
         foreach ($bikeIDs as $bikeID){
