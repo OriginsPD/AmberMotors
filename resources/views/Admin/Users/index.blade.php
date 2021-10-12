@@ -20,7 +20,7 @@
 		</thead>
     <!-- Remove the nasty inline CSS fixed height on production and replace it with a CSS class — this is just for demonstration purposes! -->
 		<tbody class="bg-grey-light flex flex-col items-center justify-between overflow-y-scroll w-full" style="height: 80vh;">
-		@foreach ($buyers as $buyer)
+		@foreach ($employees as $buyer)
     <tr class="flex w-full mb-4">
       <td class="p-4 w-1/4">{{ $buyer->name }}</td>
       <td class="p-4 w-1/4">{{ $buyer->email }}</td>

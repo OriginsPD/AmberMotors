@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Admin;
 
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use Illuminate\Support\Facades\DB;
 
 
 class AdminEmployeeController extends Controller
@@ -76,7 +77,7 @@ class AdminEmployeeController extends Controller
      */
     public function update(Request $request, $id)
     {
-        
+
     }
 
     /**
@@ -87,6 +88,6 @@ class AdminEmployeeController extends Controller
      */
     public function destroy($id)
     {
-        
+
     }
 }
