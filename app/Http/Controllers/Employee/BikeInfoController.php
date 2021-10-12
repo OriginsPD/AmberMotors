@@ -5,8 +5,11 @@ namespace App\Http\Controllers\Employee;
 use App\Actions\AddBikeInfoAction;
 use App\Actions\AllBrandsAction;
 use App\Actions\AllCategoryAction;
+use App\Actions\ShowSelectBikeAction;
 use App\Actions\ToggleActiveAction;
+use App\Actions\UpdateBikeAction;
 use App\Actions\ViewBikeDetailsAction;
+use App\Actions\ViewClientPenaltyAction;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\AddBike;
 use Illuminate\Http\Request;
@@ -32,18 +35,22 @@ class BikeInfoController extends Controller
         return back()->with('success', 'Bike Information Added Successful');
     }
 
-    public function show($id, AllBrandsAction $BrandAction, AllCategoryAction $CategoryAction)
+    public function show($id, AllBrandsAction $BrandAction,
+                         AllCategoryAction $CategoryAction,
+                         ShowSelectBikeAction $selectBikeAction)
     {
         $brands = $BrandAction->execute();
-        $catogries = $CategoryAction->execute();
+        $categories = $CategoryAction->execute();
+        $bike_info = $selectBikeAction->execute($id);
 
-        return view('Employee.customer.show',compact(['brands','catogries']));
+        return view('Employee.clients.show',compact(['brands','categories','bike_info']));
     }
 
-//    public function update($id, ): \Illuminate\Http\RedirectResponse
-//    {
-//
-//        return back();
-//    }
+    public function update(AddBike $request ,$id, UpdateBikeAction $updateBike): \Illuminate\Http\RedirectResponse
+    {
+        $updateBike->execute($request ,$id);
+
+        return back()->with('success','Bike Information Update Successfully');
+    }
 
 }
