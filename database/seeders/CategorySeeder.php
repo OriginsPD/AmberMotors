@@ -21,9 +21,10 @@ class CategorySeeder extends Seeder
             'Hybrid/commuter bikes',
             'Cyclocross bikes'
         ];
-
         foreach ($categorys as $category) {
+            $rand = rand(1,8);
             Bike_Category::create([
+                'brand_id' =>  $rand,
                 'category_nm' => $category,
             ]);
         }

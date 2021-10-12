@@ -1,7 +1,7 @@
 @extends('layout.app')
 
 @section('page_title','Bike')
-
+{{ dd($bikes) }}
 @section('content')
     <section class="text-gray-600 bg-gradient-to-tr from-blue-700 to-blue-300 body-font">
         <div class="container px-5 py-24 mx-auto">

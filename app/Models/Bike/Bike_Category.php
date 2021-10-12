@@ -14,7 +14,8 @@ class Bike_Category extends Model
     public $timestamps = false;
 
     protected $fillable = [
-        'category_nm'
+        'brand_id',
+        'category_nm',
     ];
 
     public function bike_categories(): \Illuminate\Database\Eloquent\Relations\HasMany
