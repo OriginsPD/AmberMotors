@@ -22,15 +22,15 @@
             >
         </li>
         <li id="tab-4" class="mr-1">
-            <a
-                class="bg-white inline-block border-b-2 py-2 px-4 hover:text-yellow-500 focus:outline-none"
-                href="#">
+            <span
+                class="bg-white inline-block border-b-2 py-2 px-4 hover:text-yellow-500 focus:outline-none">
                 <x-search />
-            </a
-            >
+            </span>
         </li>
     </ul>
-    {{ $slot }}
+    <div class="flex flex-row ">
+        {{ $slot }}
+    </div>
 </div>
 
 <script>
@@ -59,6 +59,7 @@
             $('#tab-btn-3').addClass('tab-active');
 
         });
+
     });
 </script>
 

@@ -15,6 +15,10 @@
 @if(session()->has('success'))
     <x-swal.success message="{{ session('success') }}" />
 @endif
+@if(session()->has('fail'))
+    <x-swal.fail message="{{ session('fail') }}" />
+@endif
+
 
 <div class="flex justify-start md:h-screen h-screen w-full">
     <div class=" h-screen">
