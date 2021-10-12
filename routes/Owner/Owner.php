@@ -2,8 +2,7 @@
 
 use App\Http\Controllers\Employee\Bike\BikeStatusController;
 use App\Http\Controllers\Employee\BikeInfoController;
-use App\Http\Controllers\Employee\Customer\CurrentCustomerController;
-use App\Http\Controllers\Employee\Customer\PastCustomerController;
+use App\Http\Controllers\Employee\Clients\ClientsController;
 use App\Http\Controllers\Employee\CustomerInfoController;
 use App\Http\Controllers\Employee\EmployeeDashController;
 use App\Models\Payment\Penalty;
@@ -17,8 +16,6 @@ Route::group(['as' => 'Owner'], function () {
     Route::resource('Status', BikeStatusController::class);
 
     Route::group(['as' => 'Customer.'], function () {
-        Route::resource('Current', CurrentCustomerController::class);
-        Route::resource('Past', PastCustomerController::class);
-        Route::resource('Penalty', Penalty::class);
+        Route::resource('Past', ClientsController::class);
     });
 });

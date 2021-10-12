@@ -1,6 +1,6 @@
 @extends('layout.employee')
 
-@section('page_title','Selected Customer Information')
+@section('page_title','Selected Clients Information')
 
 @section('content')
     <section class="text-gray-600 body-font overflow-hidden">

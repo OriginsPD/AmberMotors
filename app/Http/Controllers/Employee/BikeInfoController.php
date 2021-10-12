@@ -42,7 +42,7 @@ class BikeInfoController extends Controller
         $categories = $CategoryAction->execute();
         $bike_info = $selectBikeAction->execute($id);
 
-        return view('Employee.customer.show',compact(['brands','categories','bike_info']));
+        return view('Employee.clients.show',compact(['brands','categories','bike_info']));
     }
 
     public function update(AddBike $request ,$id, UpdateBikeAction $updateBike): \Illuminate\Http\RedirectResponse
