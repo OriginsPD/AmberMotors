@@ -45,6 +45,7 @@ Route::resource('AdminCategory', AdminCategoryController::class);
 Route::resource('AdminUser', AdminUserController::class);
 
 
+
 //Route For Logout
 Route::post('logout', [LogoutController::class, 'logout'])->name('logout');
 

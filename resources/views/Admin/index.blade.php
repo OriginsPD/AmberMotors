@@ -3,6 +3,7 @@
 @section('content')
 
 
+
 <section class="">
   <div class="ml-20 mx-auto bg-red-500 mt-20 max-h-0">
     <h5 class="text-white font-bold max-w-xl">Add A Brand</h5>
@@ -38,7 +39,7 @@
               @csrf
               @method('DELETE')
               <button class="bg-red-500 text-grey-lighter font-bold py-1 px-3 rounded text-xs bg-blue hover:bg-blue-dark">Delete</button>
-              <button class="bg-green-500 text-grey-lighter font-bold py-1 px-3 rounded text-xs bg-blue hover:bg-blue-dark"><a href="{{ route('Admin.show',$brand->id) }}"> View Categories</a></button>
+              <button class="bg-green-500 text-grey-lighter font-bold py-1 px-3 rounded text-xs bg-blue hover:bg-blue-dark"><a href="{{ route('AdminCategory.show',$brand->id) }}"> View Categories</a></button>
               </form>
           </td>
         </tr>
@@ -48,4 +49,5 @@
   </div>
 </div>
 <!-- component -->
+
 @endsection

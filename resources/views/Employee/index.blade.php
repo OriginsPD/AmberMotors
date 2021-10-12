@@ -3,162 +3,95 @@
 @section('page_title','Dashboard')
 
 @section('content')
+
+    {{--    <section class="text-gray-600 body-font">--}}
+    {{--        <div class="container px-5 py-24 mx-auto flex flex-wrap">--}}
+    {{--            <div class="flex flex-wrap -mx-4 mt-auto mb-auto lg:w-1/2 sm:w-2/3 content-start sm:pr-10">--}}
+    {{--                <div class="w-full sm:p-4 px-4 mb-6">--}}
+    {{--                    <h1 class="mb-6 text-4xl font-bold leading-tight text-blue-900 md:text-4xl lg:text-5xl">Welcome To <span class=" text-yellow-600">AmberMotors</span>.</h1>--}}
+    {{--                    <div class="leading-relaxed">Pour-over craft beer pug drinking vinegar live-edge gastropub, keytar neutra sustainable fingerstache kickstarter.</div>--}}
+    {{--                </div>--}}
+    {{--                <div class="p-4 sm:w-1/2 lg:w-1/4 w-1/2">--}}
+    {{--                    <h2 class="title-font font-medium text-3xl text-gray-900">2.7K</h2>--}}
+    {{--                    <p class="leading-relaxed">Users</p>--}}
+    {{--                </div>--}}
+    {{--                <div class="p-4 sm:w-1/2 lg:w-1/4 w-1/2">--}}
+    {{--                    <h2 class="title-font font-medium text-3xl text-gray-900">1.8K</h2>--}}
+    {{--                    <p class="leading-relaxed">Subscribes</p>--}}
+    {{--                </div>--}}
+    {{--                <div class="p-4 sm:w-1/2 lg:w-1/4 w-1/2">--}}
+    {{--                    <h2 class="title-font font-medium text-3xl text-gray-900">35</h2>--}}
+    {{--                    <p class="leading-relaxed">Downloads</p>--}}
+    {{--                </div>--}}
+    {{--                <div class="p-4 sm:w-1/2 lg:w-1/4 w-1/2">--}}
+    {{--                    <h2 class="title-font font-medium text-3xl text-gray-900">4</h2>--}}
+    {{--                    <p class="leading-relaxed">Products</p>--}}
+    {{--                </div>--}}
+    {{--            </div>--}}
+    {{--            <div class="lg:w-1/2 sm:w-1/3 w-full rounded-lg overflow-hidden mt-6 sm:mt-0">--}}
+    {{--                <img class="object-cover object-center w-full h-full" src="https://www.pixel4k.com/wp-content/uploads/2018/09/bmw-k100-motorcycle-bike-side-view-4k_1536018804.jpg" alt="stats">--}}
+    {{--            </div>--}}
+    {{--        </div>--}}
+    {{--    </section>--}}
+
     <section class="text-gray-600 body-font">
-        <div class="px-5 py-8 mx-auto">
-            <div class="flex flex-wrap justify-evenly -m-4 text-center">
-                <div class="p-4 sm:w-1/4 w-1/2">
-                    <h2 class="title-font font-medium sm:text-4xl text-3xl text-gray-900">2.7K</h2>
-                    <p class="leading-relaxed">Users</p>
+        <div class="container px-5 py-24 mx-auto">
+            <div class="flex flex-col text-center w-full mb-20">
+                <h1 class="mb-6 text-4xl font-bold leading-tight text-yellow-600 md:text-4xl lg:text-5xl">Amber<span
+                        class=" text-blue-900 ">Motors</span></h1>
+
+                <p class="lg:w-2/3 mx-auto leading-relaxed text-base">Whatever cardigan tote bag tumblr hexagon brooklyn
+                    asymmetrical gentrify, subway tile poke farm-to-table. Franzen you probably haven't heard of them
+                    man bun deep jianbing selfies heirloom prism food truck ugh squid celiac humblebrag.</p>
+            </div>
+            <div class="flex flex-wrap -m-4 text-center">
+                <div class="p-4 md:w-1/4 sm:w-1/2 w-full">
+                    <div class="border-2 border-gray-200 hover:shadow-2xl cursor-pointer px-4 py-6 rounded-lg">
+                        <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                             stroke-width="2" class="text-indigo-500 w-12 h-12 mb-3 inline-block" viewBox="0 0 24 24">
+                            <path d="M8 17l4 4 4-4m-4-5v9"></path>
+                            <path d="M20.88 18.09A5 5 0 0018 9h-1.26A8 8 0 103 16.29"></path>
+                        </svg>
+                        <h2 class="title-font font-medium text-3xl text-gray-900">2.7K</h2>
+                        <p class="leading-relaxed">Downloads</p>
+                    </div>
                 </div>
-                <div class="p-4 sm:w-1/4 w-1/2">
-                    <h2 class="title-font font-medium sm:text-4xl text-3xl text-gray-900">1.8K</h2>
-                    <p class="leading-relaxed">Subscribes</p>
+                <div class="p-4 md:w-1/4 sm:w-1/2 w-full">
+                    <div class="border-2 border-gray-200 hover:shadow-2xl cursor-pointer px-4 py-6 rounded-lg">
+                        <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                             stroke-width="2" class="text-indigo-500 w-12 h-12 mb-3 inline-block" viewBox="0 0 24 24">
+                            <path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"></path>
+                            <circle cx="9" cy="7" r="4"></circle>
+                            <path d="M23 21v-2a4 4 0 00-3-3.87m-4-12a4 4 0 010 7.75"></path>
+                        </svg>
+                        <h2 class="title-font font-medium text-3xl text-gray-900">1.3K</h2>
+                        <p class="leading-relaxed">Users</p>
+                    </div>
                 </div>
-                <div class="p-4 sm:w-1/4 w-1/2">
-                    <h2 class="title-font font-medium sm:text-4xl text-3xl text-gray-900">35</h2>
-                    <p class="leading-relaxed">Downloads</p>
+                <div class="p-4 md:w-1/4 sm:w-1/2 w-full">
+                    <div class="border-2 border-gray-200 hover:shadow-2xl cursor-pointer px-4 py-6 rounded-lg">
+                        <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                             stroke-width="2" class="text-indigo-500 w-12 h-12 mb-3 inline-block" viewBox="0 0 24 24">
+                            <path d="M3 18v-6a9 9 0 0118 0v6"></path>
+                            <path
+                                d="M21 19a2 2 0 01-2 2h-1a2 2 0 01-2-2v-3a2 2 0 012-2h3zM3 19a2 2 0 002 2h1a2 2 0 002-2v-3a2 2 0 00-2-2H3z"></path>
+                        </svg>
+                        <h2 class="title-font font-medium text-3xl text-gray-900">74</h2>
+                        <p class="leading-relaxed">Files</p>
+                    </div>
                 </div>
-                <div class="p-4 sm:w-1/4 w-1/2">
-                    <h2 class="title-font font-medium sm:text-4xl text-3xl text-gray-900">4</h2>
-                    <p class="leading-relaxed">Product</p>
+                <div class="p-4 md:w-1/4 sm:w-1/2 w-full">
+                    <div class="border-2 border-gray-200 hover:shadow-2xl cursor-pointer px-4 py-6 rounded-lg">
+                        <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                             stroke-width="2" class="text-indigo-500 w-12 h-12 mb-3 inline-block" viewBox="0 0 24 24">
+                            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                        </svg>
+                        <h2 class="title-font font-medium text-3xl text-gray-900">46</h2>
+                        <p class="leading-relaxed">Places</p>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
-
-    <section class="text-gray-600 body-font">
-        <div class="container px-5 py-4 mx-auto">
-            <div class="flex flex-wrap -mx-4 -mb-10 text-center">
-                <div class="sm:w-1/2 mb-10 px-4">
-                    <div class="shadow-lg rounded-lg overflow-hidden">
-                        <div class="py-3 px-5 bg-gray-50">
-                            Bar chart
-                        </div>
-                        <canvas class="p-10 " id="chartBar"></canvas>
-                    </div>
-                    <div class="shadow-lg rounded-lg overflow-hidden">
-                        <div class="py-3 px-5 bg-gray-50">
-                            Line chart
-                        </div>
-                        <canvas class="p-10 " id="chartLine"></canvas>
-                    </div>
-                </div>
-                <div class="sm:w-1/2 mb-10 px-4">
-                    <div class="shadow-lg rounded-lg overflow-hidden">
-                        <div class="py-3 px-5 bg-gray-50">
-                            Doughnut chart
-                        </div>
-                        <canvas class="p-10 " id="chartDoughnut"></canvas>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-
-    <!-- Chart doughnut -->
-    <script>
-
-        const dataDoughnut = {
-            labels: [
-                'JavaScript',
-                'Python',
-                'Ruby'
-            ],
-
-            datasets: [{
-                label: 'My First Dataset',
-
-                data: [300, 50, 100],
-
-                backgroundColor: [
-                    'rgb(133, 105, 241)',
-                    'rgb(164, 101, 241)',
-                    'rgb(101, 143, 241)'
-                ],
-                hoverOffset: 4
-            }]
-        };
-
-        const configDoughnut = {
-            type: 'doughnut',
-            data: dataDoughnut,
-            options: {}
-        };
-
-
-        var chartBar = new Chart(
-            document.getElementById('chartDoughnut'),
-            configDoughnut
-        );
-    </script>
-
-    <!-- Chart line -->
-    <script>
-
-        const labels = [
-            'January',
-            'February',
-            'March',
-            'April',
-            'May',
-            'June',
-        ];
-        const data = {
-            labels: labels,
-            datasets: [{
-                label: 'My First dataset',
-                backgroundColor: 'hsl(252, 82.9%, 67.8%)',
-                borderColor: 'hsl(252, 82.9%, 67.8%)',
-                data: [0, 10, 5, 2, 20, 30, 45],
-            }]
-        };
-
-        const configLineChart = {
-            type: 'line',
-            data,
-            options: {}
-        };
-
-        var chartLine = new Chart(
-            document.getElementById('chartLine'),
-            configLineChart
-        );
-    </script>
-
-    <!-- Chart bar -->
-    <script>
-
-        const labelsBarChart = [
-            'January',
-            'February',
-            'March',
-            'April',
-            'May',
-            'June',
-        ];
-        const dataBarChart = {
-            labels: labelsBarChart,
-            datasets: [{
-                label: 'My First dataset',
-                backgroundColor: 'hsl(252, 82.9%, 67.8%)',
-                borderColor: 'hsl(252, 82.9%, 67.8%)',
-                data: [0, 10, 5, 2, 20, 30, 45],
-            }]
-        };
-
-        const configBarChart = {
-            type: 'bar',
-            data: dataBarChart,
-            options: {}
-        };
-
-
-        var chartBar = new Chart(
-            document.getElementById('chartBar'),
-            configBarChart
-        );
-    </script>
-
 
 @endsection

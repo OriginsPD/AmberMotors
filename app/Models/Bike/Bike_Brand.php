@@ -22,4 +22,9 @@ class Bike_Brand extends Model
     {
         return $this->hasMany(Bike_Detail::class,'brand_id','id');
     }
+
+    public function categories()
+    {
+      Return $this->hasMany(Bike_Category::class,'brand_id');
+    }
 }

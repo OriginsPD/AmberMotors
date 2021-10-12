@@ -43,14 +43,14 @@ class AdminController extends Controller
 
   public function show($id)
   {
-    $bikeshow=DB::table('bike_categories')
-    ->join('bike_brands','bike_brands.id','=','bike_categories.brand_id')
-    ->select('*')
-    ->where('bike_brands.id',$id)
-    ->get();
+    // $bikeshow=DB::table('bike_categories')
+    // ->join('bike_brands','bike_brands.id','=','bike_categories.brand_id')
+    // ->select('*')
+    // ->where('bike_brands.id',$id)
+    // ->get();
 
-    $brands = Bike_Brand::find($id);
+    // $brands = Bike_Brand::find($id);
 
-    return view('Admin.show',compact('bikeshow','brands'));
+    // return view('Admin.show',compact('bikeshow','brands'));
   }
 }

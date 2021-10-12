@@ -25,14 +25,23 @@
             <x-table>
                 <x-slot name="heading">
                     <x-table.heading>Categories</x-table.heading>
+                    <x-table.heading>Option</x-table.heading>
                 </x-slot>
                 @foreach ($bikeshow as $bike)
                     <x-table.row>
-                        <x-table.cell>{{ $bike->category_nm }}</x-table.cell>
-                    </x-table.row>
+                        <x-table.cell>{{ $bike['category_nm'] }}</x-table.cell>
+            <x-table.cell>
+              <form action="{{ route('AdminCategory.destroy',$bike['id']) }}" method="POST">
+                @csrf
+              @method('DELETE')
+              <button type="submit" class="bg-red-500 text-white font-bold py-1 px-3 rounded text-xs bg-blue hover:bg-blue-dark">DELETE</button>
+              </form>
+            </x-table.cell>
+          </x-table.row>
                         @endforeach
                       </x-table>
         </div>
+        {{-- {{ $category->id }} --}}
     </div>
 
 @endsection

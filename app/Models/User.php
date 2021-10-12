@@ -62,15 +62,14 @@ class User extends Authenticatable
         return $this->belongsToMany(Role::class);
     }
 
-//    public function hasAnyRole($role): bool
-//    {
-//        return null !== $this->role()->where('name', $role)->first();
-//    }
-
+    public function employees(): \Illuminate\Database\Eloquent\Relations\HasMany
+    {
+        return $this->hasMany(Employee::class,'user_id');
+    }
 
     public function rentals(): \Illuminate\Database\Eloquent\Relations\HasMany
     {
-        return $this->hasMany(Rental::class);
+        return $this->hasMany(Rental::class, 'user_id');
     }
 
 
