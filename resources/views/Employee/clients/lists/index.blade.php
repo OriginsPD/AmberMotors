@@ -27,8 +27,8 @@
                 </x-table.row>
             @empty
                 <x-table.row>
-                    <x-table.cell-bold class="text-center">
-                        No Customers Currently Listed
+                    <x-table.cell-bold colspan="6" class="text-center">
+                        No Clients Currently Listed
                     </x-table.cell-bold>
                 </x-table.row>
             @endforelse
@@ -54,7 +54,7 @@
                </x-table.row>
            @empty
                <x-table.row>
-                   <x-table.cell-bold class="text-center">
+                   <x-table.cell-bold colspan="6" class="text-center">
                        No Customers Currently Listed
                    </x-table.cell-bold>
                </x-table.row>
@@ -91,6 +91,33 @@
                 @endforelse
             </x-table>
         @endif
+
+        <x-table id="penalty" class="hidden">
+            <x-slot name="heading">
+                <x-table.heading> Clients Name </x-table.heading>
+                <x-table.heading> Address </x-table.heading>
+                <x-table.heading> Bike Rented </x-table.heading>
+                <x-table.heading> Date Rented </x-table.heading>
+                <x-table.heading> Due Date </x-table.heading>
+                <x-table.heading_view></x-table.heading_view>
+            </x-slot>
+            @forelse($penalties as $penalty)
+                <x-table.row>
+                    <x-table.cell-bold> {{ $penalty['users']['name'] }} </x-table.cell-bold>
+                    <x-table.cell>{{ $penalty['users']['address'] }}</x-table.cell>
+                    <x-table.cell>{{ $penalty['bike_details']['bike_model'] }}</x-table.cell>
+                    <x-table.cell>{{ $penalty['rental_start_date'] }}</x-table.cell>
+                    <x-table.cell>{{ $penalty['rental_end_date'] }}</x-table.cell>
+                    <x-table.cell-edit href="{{ route('OwnerCustomer.list.show',$penalty['id']) }}"> View </x-table.cell-edit>
+                </x-table.row>
+            @empty
+                <x-table.row>
+                    <x-table.cell-bold colspan="6" class="text-center">
+                        No Penalty Currently Listed
+                    </x-table.cell-bold>
+                </x-table.row>
+            @endforelse
+        </x-table>
 
     </x-tabs>
 @endsection
