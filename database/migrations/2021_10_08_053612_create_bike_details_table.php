@@ -18,7 +18,7 @@ class CreateBikeDetailsTable extends Migration
             $table->id();
             $table->foreignId('category_id')->constrained('bike_categories','id');
             $table->foreignId('brand_id')->constrained('bike_brands','id');
-            $table->foreignId('employee_id')->constrained('employees','id');
+            $table->foreignId('employee_id')->constrained('employees','employee_id');
             $table->string('bike_model');
             $table->integer('rent_fee');
             $table->boolean('availability')->default(1);
@@ -31,7 +31,7 @@ class CreateBikeDetailsTable extends Migration
      *
      * @return void
      */
-    public function down()
+    public function down(): void
     {
         Schema::dropIfExists('bike_details');
     }

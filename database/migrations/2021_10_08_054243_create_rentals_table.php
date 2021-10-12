@@ -16,7 +16,7 @@ class CreateRentalsTable extends Migration
         Schema::create('rentals', function (Blueprint $table) {
             $table->id();
             $table->foreignId('user_id')->constrained('users','id');
-            $table->foreignId('employee_id')->constrained('employees','id');
+            $table->foreignId('employee_id')->constrained('employees','employee_id');
             $table->foreignId('bike_id')->constrained('bike_details','id');
             $table->integer('payment_fee');
             $table->boolean('payment_status')->default(0);

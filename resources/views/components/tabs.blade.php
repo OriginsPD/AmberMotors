@@ -42,6 +42,7 @@
             $('#client').slideToggle();
             $('#current').hide();
             $('#penalty').hide()
+            $('#search').hide();
 
         });
 
@@ -51,6 +52,7 @@
             $('#tab-btn-3').removeClass('tab-active');
             $('#client').hide();
             $('#penalty').hide()
+            $('#search').hide();
             $('#current').slideToggle();
 
         });
@@ -62,6 +64,7 @@
             $('#client').hide();
             $('#penalty').slideToggle();
             $('#current').hide();
+            $('#search').hide();
 
         });
 
