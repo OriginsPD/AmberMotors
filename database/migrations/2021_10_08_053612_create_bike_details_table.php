@@ -16,9 +16,11 @@ class CreateBikeDetailsTable extends Migration
     {
         Schema::create('bike_details', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('category_id')->constrained('bike_categories','id');
-            $table->foreignId('brand_id')->constrained('bike_brands','id');
-            $table->foreignId('employee_id')->constrained('employees','employee_id');
+
+            $table->foreignId('category_id')->constrained('bike_categories','id')->onDelete('cascade');
+            $table->foreignId('brand_id')->constrained('bike_brands','id')->onDelete('cascade');
+            $table->foreignId('employee_id')->constrained('employees','id');
+
             $table->string('bike_model');
             $table->integer('rent_fee');
             $table->boolean('availability')->default(1);

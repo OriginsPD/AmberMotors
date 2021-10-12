@@ -32,13 +32,13 @@
         <nav class="flex-grow pb-4 pr-4 md:block md:pb-0 md:overflow-y-auto">
             <ul>
                 <li>
-                    <a class="block px-4 py-2 mt-2 text-base text-blueGray-500 transition duration-500 ease-in-out transform border-l-4 border-blue-600 focus:shadow-outline focus:outline-none focus:ring-2 ring-offset-current ring-offset-2 hover:text-black" href="{{ route("Admin.index") }}">Bike Brands</a>
+                    <a class="block px-4 py-2 mt-2 text-base text-blueGray-500 transition duration-500 ease-in-out transform border-l-4 border-white focus:shadow-outline focus:outline-none focus:ring-2 ring-offset-current ring-offset-2 hover:text-black" href="{{ route("Admin.index") }}">Bike Brands</a>
                 </li>
                 <li>
                     <a class="block px-4 py-2 mt-2 text-base text-blueGray-500 transition duration-500 ease-in-out transform border-l-4 border-white hover:border-blue-600 focus:shadow-outline focus:outline-none focus:ring-2 ring-offset-current ring-offset-2 hover:text-black" href="{{ route('user') }}">Users</a>
                 </li>
                 <li>
-                    <a class="block px-4 py-2 mt-2 text-base text-blueGray-500 transition duration-500 ease-in-out transform border-l-4 border-white hover:border-blue-600 focus:shadow-outline focus:outline-none focus:ring-2 ring-offset-current ring-offset-2 hover:text-black" href="#">Services</a>
+                    <a class="block px-4 py-2 mt-2 text-base text-blueGray-500 transition duration-500 ease-in-out transform border-l-4 border-white hover:border-blue-600 focus:shadow-outline focus:outline-none focus:ring-2 ring-offset-current ring-offset-2 hover:text-black" href="#">Rental History</a>
                 </li>
                 <li>
                     <a class="block px-4 py-2 mt-2 text-base text-blueGray-500 transition duration-500 ease-in-out transform border-l-4 border-white hover:border-blue-600 focus:shadow-outline focus:outline-none focus:ring-2 ring-offset-current ring-offset-2 hover:text-black" href="#">Services</a>
@@ -52,7 +52,7 @@
             </ul>
         </nav>
     </div>
-    <div class="flex justify-center bg-gradient-to-tr from-blue-700 to-blue-300 w-full">
+    <div class=" justify-center bg-gradient-to-tr w-full">
         @yield('content')
     </div>
 </div>

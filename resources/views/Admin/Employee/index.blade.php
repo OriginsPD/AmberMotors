@@ -2,7 +2,7 @@
 
 @section('content')
 
-    <x-head class="text-center mt-2">Customer Details</x-head>
+    <x-head class="text-center mt-2">Employee Details</x-head>
     <div class="flex container mx-auto mt-20 flex-col">
         <div class="-my-2 overflow-x-auto ">
 
@@ -15,16 +15,16 @@
                     <x-table.heading> Status </x-table.heading>
                     <x-table.heading_view></x-table.heading_view>
                 </x-slot>
-                @foreach ($buyers as $buyer)
+                @foreach ($employees as $employee)
                     <x-table.row>
                         {{-- <x-table.cell-bold></x-table.cell-bold> --}}
-                        <x-table.cell>{{ $buyer->name }}</x-table.cell>
-                        <x-table.cell>{{ $buyer->email }}</x-table.cell>
-                        <x-table.cell>{{ $buyer->phone_nbr }}</x-table.cell>
-                        <x-table.cell>{{ $buyer->address }}</x-table.cell>
-                        @if ($buyer->Active_flag == 1)
+                        <x-table.cell>{{ $employee->name }}</x-table.cell>
+                        <x-table.cell>{{ $employee->email }}</x-table.cell>
+                        <x-table.cell>{{ $employee->phone_nbr }}</x-table.cell>
+                        <x-table.cell>{{ $employee->address }}</x-table.cell>
+                        @if ($employee->Active_flag == 1)
                             <x-table.cell>Active
-                                <form action="{{ route('AdminUser.update', $buyer->id) }}" method="post">
+                                <form action="{{ route('AdminEmployee.update', $employee->id) }}" method="post">
                                     @csrf
                                     @method('DELETE')
                                     <input type="hidden" value="0" name="deactivate">
@@ -33,7 +33,7 @@
                             </x-table.cell>
                         @else
                             <x-table.cell>Not Active
-                                <form action="{{ route('AdminUser.update', $buyer->id) }}" method="post">
+                                <form action="{{ route('AdminEmployee.update', $employee->id) }}" method="post">
                                     @csrf
                                     @method('PUT')
                                     <input type="hidden" value="1" name="activate">
@@ -41,14 +41,12 @@
                                 </form>
                             </x-table.cell>
                             @endif
-                            <x-table.cell-edit href="{{ route('AdminUser.show',$buyer->id) }}"> View </x-table.cell-edit>
+                            <x-table.cell-edit href="#"> View </x-table.cell-edit>
                     </x-table.row>
                 @endforeach
             </x-table>
 
-
         </div>
     </div>
-
 
 @endsection

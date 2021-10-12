@@ -43,6 +43,12 @@ class Employee extends Model
             ->with('bike_brands', 'bike_category');
     }
 
+    // public function bike_details(): \Illuminate\Database\Eloquent\Relations\HasMany
+    // {
+    //     return $this->hasMany(Bike_Detail::class,'employee_nbr','id')
+    //         ->with('bike_brands','bike_category');
+    // }
+
     public function setEmployeeNbrAttribute($value): string
     {
         return $this->attributes['employee_id'] = 'BK-' . (1000 + $value);

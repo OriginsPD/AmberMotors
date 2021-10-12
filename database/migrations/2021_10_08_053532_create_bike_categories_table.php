@@ -15,6 +15,7 @@ class CreateBikeCategoriesTable extends Migration
     {
         Schema::create('bike_categories', function (Blueprint $table) {
             $table->id();
+            $table->foreignId('brand_id')->constrained('bike_brands','id')->onDelete('cascade')->onUpdate('cascade');
             $table->string('category_nm');
         });
     }

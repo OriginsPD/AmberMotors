@@ -22,7 +22,7 @@ class AdminEmployeeController extends Controller
       ->where('role_user.role_id','=','2')
       ->get();
 
-      return view('Admin.Users.index',['employees'=>$employees]);
+      return view('Admin.Employee.index',['employees'=>$employees]);
     }
 
     /**
@@ -78,6 +78,11 @@ class AdminEmployeeController extends Controller
     public function update(Request $request, $id)
     {
 
+      $user = User::find($id);
+      $user->Active_flag = $request->activate;
+      $user->update();
+      return redirect()->back();
+
     }
 
     /**
@@ -86,8 +91,13 @@ class AdminEmployeeController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(Request $req,$id)
     {
+
+      $user = User::find($id);
+      $user->Active_flag = $req->deactivate;
+      $user->update();
+      return redirect()->back();
 
     }
 }
