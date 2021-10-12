@@ -10,7 +10,7 @@
             <x-slot name="heading">
                 <x-table.heading> User ID </x-table.heading>
                 <x-table.heading> Employee Number </x-table.heading>
-                <x-table.heading> Bike ID </x-table.heading>
+                <x-table.heading> Bike Model </x-table.heading>
                 <x-table.heading> Payment Fee</x-table.heading>
                 <x-table.heading> Payment Status </x-table.heading>
                 <x-table.heading> Rent Status </x-table.heading>
@@ -21,8 +21,8 @@
                 <x-table.row>
                     {{-- <x-table.cell-bold></x-table.cell-bold> --}}
                     <x-table.cell>{{ $custom->user_id}}</x-table.cell>
-                    <x-table.cell>{{ $custom->employee_nbr}}</x-table.cell>
-                    <x-table.cell>{{ $custom->bike_id}}</x-table.cell>
+                    <x-table.cell>{{ $custom->employee_id}}</x-table.cell>
+                    <x-table.cell>{{ $custom->bike_model}}</x-table.cell>
                     <x-table.cell>{{ $custom->payment_fee}}</x-table.cell>
                     <x-table.cell>{{ $custom->payment_status}}</x-table.cell>
                     <x-table.cell>{{ $custom->rent_status}}</x-table.cell>

@@ -21,8 +21,8 @@ class DatabaseSeeder extends Seeder
             UserRolesSeeder::class,
             employeeseeder::class,
             // BikeDetailSeeder::class,
-//            RentalSeeder::class,
-            CustomerSeeder::class
+          //  RentalSeeder::class,
+            // CustomerSeeder::class
         ]);
     }
 }

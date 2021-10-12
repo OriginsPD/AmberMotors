@@ -62,7 +62,7 @@ class AdminUserController extends Controller
     {
       $customerrental = DB::table('rentals')
       ->join('users','users.id','=','rentals.user_id')
-      ->join('employees','employees.id','=','rentals.employee_nbr')
+      ->join('employees','employees.id','=','rentals.employee_id')
       ->join('bike_details','bike_details.id','=','rentals.bike_id')
       ->select('*') 
       ->where('rentals.user_id',$id)

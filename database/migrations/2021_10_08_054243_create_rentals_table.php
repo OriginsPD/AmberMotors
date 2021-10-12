@@ -24,7 +24,6 @@ class CreateRentalsTable extends Migration
             $table->date('rental_start_date');
             $table->date('rental_end_date');
             $table->date('return_date');
-
         });
     }
 

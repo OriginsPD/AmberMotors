@@ -25,7 +25,7 @@ class CustomerSeeder extends Seeder
         Employee::create([
           'employee_nbr'=>rand(1,90),
           'user_id'=>$customer->id,
-          'active_flag'=>rand(0,1),
+          'active_flg'=>rand(0,1),
 
         ]);
       }
