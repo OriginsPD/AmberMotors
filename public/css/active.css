@@ -1,0 +1,45 @@
+.active {
+    color: rgb(99, 102, 241);
+    border-bottom-width: 2px;
+    flex-grow: 1;
+    cursor: pointer;
+    --tw-border-opacity: 1;
+    border-color: rgba(99, 102, 241, var(--tw-border-opacity));
+    font-size: 1.125rem;
+    line-height: 1.75rem;
+    padding: 0.5rem 0.25rem;
+
+}
+
+.deactivate {
+    color: gray;
+    border-bottom-width: 2px;
+    flex-grow: 1;
+    cursor: pointer;
+    --tw-border-opacity: 1;
+    border-color: rgb(157, 157, 157, var(--tw-border-opacity));
+    font-size: 1.125rem;
+    line-height: 1.75rem;
+    padding: 0.5rem 0.25rem;
+
+}
+
+.tab-active {
+    color: orange;
+    --tw-border-opacity: 1;
+    border-color: rgb(253, 183, 18, var(--tw-border-opacity));
+}
+
+.sidebar-active {
+    border-color: orange;
+    color: darkblue;
+}
+
+.rotate{
+    -moz-transition: all 0.5s linear;
+    -webkit-transition: all 0.5s linear;
+    transition: all 0.5s linear;
+    -moz-transform:rotate(180deg);
+    -webkit-transform:rotate(180deg);
+    transform:rotate(180deg);
+}
