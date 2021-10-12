@@ -19,12 +19,12 @@
                     <i class="fas fa-chart-bar text-yellow-600 pr-2"></i> Main Stats
 
                 </x-sidebar-link>
-                <x-sidebar-link href="{{ route('OwnerCustomer-list.index') }}">Clients</x-sidebar-link>
+                <x-sidebar-link href="#">Clients</x-sidebar-link>
                 <div class="text-sm text-gray-500 m-2">
                     Table information
                 </div>
 
-                <x-sidebar-link href="{{ route('OwnerCustomer.Past.index') }}">
+                <x-sidebar-link href="{{ route('OwnerCustomer.list.index') }}">
                     <i class="fas fa-user-edit text-yellow-600 pr-2"></i>
                     Clients
                 </x-sidebar-link>
@@ -59,6 +59,8 @@
         $("#create-bike").on('click',function (){
             $('#model-bike').fadeToggle("slow");
         });
+
+
 
     });
 </script>

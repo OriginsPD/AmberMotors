@@ -13,6 +13,7 @@ class AdminController extends Controller
   public function index(): View
   {
     $brands=Bike_Brand::all();
+
     return view('Admin.index',['brands'=>$brands]);
   }
 

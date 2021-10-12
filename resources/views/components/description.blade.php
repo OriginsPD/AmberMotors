@@ -1,5 +1,6 @@
-<div c >
-    <p class="leading-relaxed my-4 border-t-2">Lorem ipsum dolor sitamet, consectetur adipisicing elit. Aspernatur consequuntur deserunt eius fugiat id magnam non nostrum qui quisquam tempora.</p>
+<div c>
+    <p class="leading-relaxed my-4 border-t-2">Lorem ipsum dolor sitamet, consectetur adipisicing elit. Aspernatur
+        consequuntur deserunt eius fugiat id magnam non nostrum qui quisquam tempora.</p>
     <div class="flex border-t border-gray-200 py-2">
         <span class="text-gray-500">Payment Status:</span>
         <span class="ml-auto text-gray-900">{{ ($customer[0]['payment_status']) ? 'Paid' : 'Not Paid' }}</span>
@@ -21,8 +22,8 @@
         <span class="ml-auto text-gray-900">{{ $customer[0]['bike_details']['rent_fee'] }}</span>
     </div>
     <div class="flex">
-                        <span class="title-font font-medium text-2xl text-gray-900">
-                            Payment Fee: ${{ $customer[0]['payment_fee'] }}
-                        </span>
+        <span class="title-font font-medium text-2xl text-gray-900">
+            Payment Fee: ${{ $customer[0]['payment_fee'] }}
+        </span>
     </div>
 </div>

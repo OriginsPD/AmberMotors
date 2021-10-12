@@ -1,4 +1,4 @@
-.active{
+.active {
     color: rgb(99, 102, 241);
     border-bottom-width: 2px;
     flex-grow: 1;
@@ -11,7 +11,7 @@
 
 }
 
-.deactivate{
+.deactivate {
     color: gray;
     border-bottom-width: 2px;
     flex-grow: 1;
@@ -24,8 +24,13 @@
 
 }
 
-.tab-active{
+.tab-active {
     color: orange;
     --tw-border-opacity: 1;
     border-color: rgb(253, 183, 18, var(--tw-border-opacity));
+}
+
+.sidebar-active {
+    border-color: orange;
+    color: darkblue;
 }
