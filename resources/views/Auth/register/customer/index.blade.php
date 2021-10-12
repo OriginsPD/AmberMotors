@@ -1,6 +1,6 @@
 @extends('layout.app')
 
-@section('page_title','New Customer')
+@section('page_title','New Clients')
 
 @section('content')
     <section class="text-gray-600 body-font">

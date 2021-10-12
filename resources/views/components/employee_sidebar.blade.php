@@ -15,19 +15,33 @@
                 <div class="text-sm text-gray-500 m-2">
                     Dashboards
                 </div>
-                <x-sidebar-link href="{{ route('Owner.index') }}" >Main Stats</x-sidebar-link>
-                <x-sidebar-link href="{{ route('OwnerCustomer-list.index') }}">Customer</x-sidebar-link>
+                <x-sidebar-link href="{{ route('Owner.index') }}">
+                    <i class="fas fa-chart-bar text-yellow-600 pr-2"></i> Main Stats
+
+                </x-sidebar-link>
+                <x-sidebar-link href="{{ route('OwnerCustomer-list.index') }}">Clients</x-sidebar-link>
                 <div class="text-sm text-gray-500 m-2">
                     Table information
                 </div>
-                <x-sidebar-link href="{{ route('OwnerCustomer.Current.index') }}">Current Clients</x-sidebar-link>
-                <x-sidebar-link href="{{ route('OwnerCustomer.Past.index') }}">Clients History </x-sidebar-link>
-                <x-sidebar-link>Penalty History</x-sidebar-link>
+
+                <x-sidebar-link href="{{ route('OwnerCustomer.Past.index') }}">
+                    <i class="fas fa-user-edit text-yellow-600 pr-2"></i>
+                    Clients
+                </x-sidebar-link>
+
                 <div class="text-sm text-gray-500 m-2">
                     Vehicle Details
                 </div>
-                <x-sidebar-link href="{{ route('OwnerBike.index') }}">Vehicle Listing</x-sidebar-link>
-                <x-sidebar-link href="{{ route('OwnerStatus.index') }}">Active Status</x-sidebar-link>
+                <x-sidebar-link href="{{ route('OwnerBike.index') }}">
+                    <i class="fas fa-motorcycle text-yellow-600 pr-2"></i>
+                    Vehicle Listing
+                </x-sidebar-link>
+
+                <x-sidebar-link href="{{ route('OwnerStatus.index') }}">
+                    <i class="fas fa-toggle-on text-yellow-600 pr-2"></i>
+                    Active Status
+                </x-sidebar-link>
+
                 <div class="text-sm text-gray-500 m-2">
                     Create / Edit
                 </div>

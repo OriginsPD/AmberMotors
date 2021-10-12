@@ -23,3 +23,9 @@
     padding: 0.5rem 0.25rem;
 
 }
+
+.tab-active{
+    color: orange;
+    --tw-border-opacity: 1;
+    border-color: rgb(253, 183, 18, var(--tw-border-opacity));
+}

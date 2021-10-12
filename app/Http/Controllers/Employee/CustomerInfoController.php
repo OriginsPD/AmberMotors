@@ -10,6 +10,6 @@ class CustomerInfoController extends Controller
 {
     public function index(): View
     {
-        return view('Employee.customer.index');
+//        return view('Employee.clients.rent_details.show');
     }
 }
