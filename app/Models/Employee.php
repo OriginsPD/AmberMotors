@@ -12,6 +12,8 @@ class Employee extends Model
 {
     use HasFactory;
 
+    protected $primaryKey = 'employee_id';
+
     public $timestamps = false;
 
     protected $fillable = [
@@ -40,6 +42,12 @@ class Employee extends Model
         return $this->hasMany(Bike_Detail::class, 'employee_id', 'id')
             ->with('bike_brands', 'bike_category');
     }
+
+    // public function bike_details(): \Illuminate\Database\Eloquent\Relations\HasMany
+    // {
+    //     return $this->hasMany(Bike_Detail::class,'employee_nbr','id')
+    //         ->with('bike_brands','bike_category');
+    // }
 
     public function setEmployeeNbrAttribute($value): string
     {

@@ -28,7 +28,7 @@ class CheckRole
                     return response()->view('Employee.index');
                 }
                 if (session('role') === 3) {
-                    return response()->view('Admin.index');
+                    return redirect()->route('Admin.index');
                 }
             }
         }
