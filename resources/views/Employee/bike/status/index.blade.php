@@ -13,7 +13,6 @@
                     <x-table.heading>Brand</x-table.heading>
                     <x-table.heading>Model</x-table.heading>
                     <x-table.heading>Active Status</x-table.heading>
-                    <x-table.heading class="text-right"></x-table.heading>
                     <x-table.heading class="text-center">Actions</x-table.heading>
 
                 </x-slot>
@@ -55,7 +54,7 @@
                     </x-table.row>
                 @empty
                     <x-table.row>
-                        <x-table.cell colspan="6" class='text-center font-bold'> No Bike Detail Found</x-table.cell>
+                        <x-table.cell colspan="5" class='text-center font-bold'> No Bike Detail Found</x-table.cell>
                     </x-table.row>
                 @endforelse
             </x-table.index>
