@@ -1,5 +1,8 @@
 <?php
 
+
+use App\Http\Controllers\Admin\AdminEmployeeController;
+use App\Http\Controllers\Admin\AdminUserController;
 use App\Http\Controllers\Admin\AdminController;
 use App\Http\Controllers\LogoutController;
 use Illuminate\Support\Facades\Route;
@@ -35,6 +38,10 @@ require __DIR__ . '/Owner/Owner.php';
 
 // Routes for the Admin Prokushxx Controller
 Route::resource('Admin', AdminController::class);
+Route::resource('AdminEmployee', AdminEmployeeController::class);
+Route::resource('AdminUser', AdminUserController::class);
+Route::get('Users',function(){return view('Admin.users');})->name('user');
+
 
 
 

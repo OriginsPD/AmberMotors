@@ -17,4 +17,6 @@ class role_user extends Model
         'user_id',
         'role_id',
     ];
+
+
 }

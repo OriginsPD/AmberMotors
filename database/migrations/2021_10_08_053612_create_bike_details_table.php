@@ -18,10 +18,11 @@ class CreateBikeDetailsTable extends Migration
             $table->id();
             $table->foreignId('category_id')->constrained('bike_categories','id');
             $table->foreignId('brand_id')->constrained('bike_brands','id');
-            $table->foreignId('employee_nbr')->constrained('employees','id');
+            $table->foreignId('employee_id')->constrained('employees','id');
             $table->string('bike_model');
             $table->integer('rent_fee');
             $table->boolean('availability')->default(1);
+            $table->string('image_path')->nullable();
         });
     }
 

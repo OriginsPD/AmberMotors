@@ -12,21 +12,22 @@ class Bike_Detail extends Model
 {
     use HasFactory;
 
-    public $table = 'bike_details';
+    protected $table = 'bike_details';
 
     public $timestamps = false;
 
     protected $fillable = [
         'category_id',
         'brand_id',
-        'employee_nbr',
+        'employee_id',
         'bike_model',
         'rent_fee',
+        'image_path',
     ];
 
     public function employees(): \Illuminate\Database\Eloquent\Relations\BelongsTo
     {
-        return $this->belongsTo(Employee::class,'employee_nbr','id');
+        return $this->belongsTo(Employee::class,'employee_id','id');
     }
 
     public function bike_brands(): \Illuminate\Database\Eloquent\Relations\BelongsTo
@@ -41,7 +42,7 @@ class Bike_Detail extends Model
 
     public function rentals(): \Illuminate\Database\Eloquent\Relations\HasMany
     {
-        return $this->hasMany(Rental::class);
+        return $this->hasMany(Rental::class,'bike_id')->with('users');
     }
 
 }
