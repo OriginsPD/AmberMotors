@@ -39,7 +39,7 @@ class Employee extends Model
 
     public function bike_details(): \Illuminate\Database\Eloquent\Relations\HasMany
     {
-        return $this->hasMany(Bike_Detail::class, 'employee_id', 'id')
+        return $this->hasMany(Bike_Detail::class, 'employee_id', 'employee_id')
             ->with('bike_brands', 'bike_category');
     }
 
