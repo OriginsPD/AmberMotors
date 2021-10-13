@@ -14,8 +14,7 @@ class CreateEmployeesTable extends Migration
     public function up(): void
     {
         Schema::create('employees', function (Blueprint $table) {
-            $table->id();
-            $table->string('employee_nbr');
+            $table->id('employee_id');
             $table->foreignId('user_id')->constrained('users','id');
             $table->boolean('active_flg')->default(0);
         });
