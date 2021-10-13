@@ -15,7 +15,7 @@
                             </h2>
                         <strong
                             class="flex items-end justify-center mx-auto mb-8 text-3xl font-black leading-none text-center text-black lg:text-4xl ">
-                            $0
+                            $ {{ number_format($income[0]['accumulate_amt'],'2') }}
                         </strong>
                         <h1 class="mx-auto mb-8 text-2xl font-semibold leading-none tracking-tighter text-black lg:text-3xl title-font">
                             Grand Total Made. </h1>
