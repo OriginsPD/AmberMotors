@@ -1,11 +1,12 @@
 <?php
 
-namespace App\Actions;
+namespace App\Actions\Create;
 
 use App\Http\Requests\AddBike;
 use App\Models\Bike\Bike_Detail;
 use App\Models\Employee;
-use App\Models\RentalModelStats;
+use App\Models\Payment\RentalModelStats;
+use App\Models\User;
 use Illuminate\Support\Facades\Auth;
 
 class AddBikeInfoAction
@@ -30,6 +31,7 @@ class AddBikeInfoAction
             'bike_id' => $id,
             'total' => 0
         ]);
+
     }
 
 }

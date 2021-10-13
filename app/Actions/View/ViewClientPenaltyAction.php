@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Actions;
+namespace App\Actions\View;
 
 use App\Models\Payment\Rental;
 use Illuminate\Support\Facades\Auth;
