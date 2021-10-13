@@ -4,23 +4,16 @@
 
 @section('content')
     <section class="text-gray-600 body-font">
-        <div 
-        class="w-full h-full bg-no-repeat bg-cover py-8 px-8 bg-blend-darken bg-blend-saturation" 
-        style="background-image: url('/img/bike-closeup.jpg')">
-
         <div class=" px-5  mx-auto">
             <div class="flex flex-col text-center w-full mb-12">
-                <h1 class="sm:text-6xl text-4xl font-bold uppercase title-font mb-4 text-white">Welcome To the World
+                <h1 class="sm:text-6xl text-4xl font-bold uppercase title-font mb-4 text-blue-500">Welcome To the World
                     Of <br> Bike Lovers</h1>
 {{--                 <p class="lg:w-2/3 mx-auto leading-relaxed text-base">Lorem ipsum dolor st amet, consectetur adipisicing
                     elit. Atque consequuntur esse nihil possimus quisquam quod repudiandae veniam vero? Adipisci
                     aspernatur exercitationem totam.</p>
  --}}            </div>
-            <div class="mt-4 bg-white shadow-md rounded-lg py-10">
             <form action="{{ route('RegisterEmployee.store') }}" method="POST">
                 @csrf
-                <div
-                    class="flex lg:w-2/3 w-full sm:flex-row flex-col mx-auto px-8 sm:space-x-4 sm:space-y-0 space-y-4 sm:px-0 items-end">
                     <div class="relative flex-grow w-full">
                         <label for="name" class="leading-7 text-sm text-gray-600">Full Name:
                             <span class="text-xs ml-4 text-red-700">
@@ -108,7 +101,5 @@
 
             </form>
         </div>
-        </div>
-    </div>
     </section>
 @endsection
