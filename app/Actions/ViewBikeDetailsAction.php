@@ -13,6 +13,7 @@ class ViewBikeDetailsAction
         $details = Employee::with('bike_details')
             ->where('user_id',Auth::id())
             ->get()->toArray();
+
         return $details[0]['bike_details'];
     }
 }
