@@ -37,7 +37,7 @@
             </x-table.row>
         @empty
             <x-table.row>
-                <x-table.cell colspan="5" class='text-center'> No Bike Detail Found</x-table.cell>
+                <x-table.cell colspan="6" class='text-center'> No Bike Detail Found</x-table.cell>
             </x-table.row>
         @endforelse
     </x-table.index>

@@ -3,7 +3,7 @@
 namespace App\Http\Controllers\Employee\Bike;
 
 use App\Actions\ToggleActiveAction;
-use App\Actions\ViewBikeDetailsAction;
+use App\Actions\View\ViewBikeDetailsAction;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use Illuminate\View\View;

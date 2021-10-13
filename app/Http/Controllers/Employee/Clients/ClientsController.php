@@ -2,11 +2,11 @@
 
 namespace App\Http\Controllers\Employee\Clients;
 
-use App\Actions\SearchBikeAction;
-use App\Actions\ShowCustomerAction;
-use App\Actions\ViewClientPenaltyAction;
-use App\Actions\ViewCurrentCustomerAction;
-use App\Actions\ViewPastCustomerAction;
+use App\Actions\Search\SearchBikeAction;
+use App\Actions\Search\ShowCustomerAction;
+use App\Actions\View\ViewClientPenaltyAction;
+use App\Actions\View\ViewCurrentCustomerAction;
+use App\Actions\View\ViewPastCustomerAction;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use Illuminate\View\View;

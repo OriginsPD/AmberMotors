@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Actions;
+namespace App\Actions\Search;
 
 use App\Models\Bike\Bike_Category;
 

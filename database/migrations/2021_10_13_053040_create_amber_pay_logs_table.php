@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateEmployeesTable extends Migration
+class CreateAmberPayLogsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,10 +13,12 @@ class CreateEmployeesTable extends Migration
      */
     public function up(): void
     {
-        Schema::create('employees', function (Blueprint $table) {
-            $table->id('employee_id');
+        Schema::create('amber_pay_logs', function (Blueprint $table) {
+            $table->id();
             $table->foreignId('user_id')->constrained('users','id');
-            $table->boolean('active_flg')->default(0);
+            $table->bigInteger('fee_paid');
+            $table->float('percentage_earn');
+            $table->date('date_logged');
         });
     }
 
@@ -27,6 +29,6 @@ class CreateEmployeesTable extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('employee');
+        Schema::dropIfExists('amber_pay_logs');
     }
 }
