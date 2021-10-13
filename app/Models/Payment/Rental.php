@@ -16,7 +16,7 @@ class Rental extends Model
 
     protected $fillable = [
         'user_id',
-        'employee_nbr',
+        'employee_id',
         'bike_id',
         'payment_fee',
         'payment_status',

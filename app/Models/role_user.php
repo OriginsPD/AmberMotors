@@ -13,10 +13,15 @@ class role_user extends Model
 
     public $timestamps = false;
 
-    protected $fillable =[
+    protected $fillable = [
         'user_id',
         'role_id',
     ];
+
+    public function users(): \Illuminate\Database\Eloquent\Relations\BelongsToMany
+    {
+        return $this->belongsToMany(User::class,'user_id');
+    }
 
 
 }
