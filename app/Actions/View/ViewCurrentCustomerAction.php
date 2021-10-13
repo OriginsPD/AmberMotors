@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Actions;
+namespace App\Actions\View;
 
 use App\Models\Employee;
 use App\Models\Payment\Rental;
