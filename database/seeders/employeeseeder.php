@@ -23,7 +23,7 @@ class employeeseeder extends Seeder
 
       foreach($employee as $employ){
         Employee::create([
-          'employee_nbr'=>rand(1,90),
+          'employee_id'=>$employ->id,
           'user_id'=>$employ->id,
           'active_flg'=>rand(0,1),
         ]);

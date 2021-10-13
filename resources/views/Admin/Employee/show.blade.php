@@ -51,7 +51,7 @@
                     <x-table.cell-bold>{{ $sales['id'] }}</x-table.cell-bold>
                     {{-- <x-table.cell></x-table.cell>  --}}
                     <x-table.cell>{{ $sales['name'] }}</x-table.cell>
-                    <x-table.cell>{{ $sales['rentals'][0]['bike_id'] }}</x-table.cell>
+                    <x-table.cell>{{ $sales['rentals'][0]['bike_details']['bike_model'] }}</x-table.cell>
                     <x-table.cell>{{ $sales['rentals'][0]['payment_fee'] }}</x-table.cell>
                     <x-table.cell>PAID</x-table.cell>
                 </x-table.row>

@@ -1,6 +1,4 @@
-
-
- <?php
+<?php
 
 namespace App\Http\Controllers\Employee\Bike;
 

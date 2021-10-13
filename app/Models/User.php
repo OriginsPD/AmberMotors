@@ -69,8 +69,7 @@ class User extends Authenticatable
 
     public function rentals(): \Illuminate\Database\Eloquent\Relations\HasMany
     {
-        return $this->hasMany(Rental::class, 'user_id');
+        return $this->hasMany(Rental::class, 'user_id')->with('bike_details');
     }
-
 
 }
