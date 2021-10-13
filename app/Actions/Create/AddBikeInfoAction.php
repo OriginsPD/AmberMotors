@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Actions;
+namespace App\Actions\Create;
 
 use App\Http\Requests\AddBike;
 use App\Models\Bike\Bike_Detail;

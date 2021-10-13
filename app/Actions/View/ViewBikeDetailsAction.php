@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Actions;
+namespace App\Actions\View;
 
 use App\Models\Bike\Bike_Detail;
 use App\Models\Employee;
