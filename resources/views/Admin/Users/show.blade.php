@@ -1,11 +1,12 @@
 @extends('layout.admin')
 
 @section('content')
-
-<x-head class="text-center mt-2">Rental History</x-head>
+@foreach ($name as $n)
+  
+<x-head class="text-center mt-2">Rental History <br>{{ $n->name }}</x-head>
+@endforeach
 <div class="flex container mx-auto mt-20 flex-col">
     <div class="-my-2 overflow-x-auto ">
-
         <x-table>
             <x-slot name="heading">
                 <x-table.heading> User ID </x-table.heading>
@@ -29,8 +30,6 @@
                 </x-table.row>
             @endforeach
         </x-table>
-
     </div>
 </div>
-
 @endsection
