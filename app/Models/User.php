@@ -62,9 +62,14 @@ class User extends Authenticatable
         return $this->belongsToMany(Role::class);
     }
 
+    public function role_users(): \Illuminate\Database\Eloquent\Relations\HasMany
+    {
+        return $this->hasMany(role_user::class,'user_id');
+    }
+
     public function employees(): \Illuminate\Database\Eloquent\Relations\HasMany
     {
-        return $this->hasMany(Employee::class,'user_id');
+        return $this->hasMany(Employee::class, 'user_id');
     }
 
     public function rentals(): \Illuminate\Database\Eloquent\Relations\HasMany
@@ -72,5 +77,13 @@ class User extends Authenticatable
         return $this->hasMany(Rental::class, 'user_id');
     }
 
+    public function amberpays(): \Illuminate\Database\Eloquent\Relations\HasOne
+    {
+        return $this->hasOne(AmberPay::class, 'user_id');
+    }
 
+    public function amberpay_logs(): \Illuminate\Database\Eloquent\Relations\HasMany
+    {
+        return $this->hasMany(AmberPay_log::class, 'user_id');
+    }
 }
