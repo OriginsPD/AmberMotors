@@ -20,7 +20,9 @@ class RentalSeeder extends Seeder
     public function run(): void
     {
 
-      $bikeIDs = [1,2,3,4,5];
+
+        $bikeIDs = [1,2,3,4,5];
+
 
       foreach ($bikeIDs as $bikeID){
       
