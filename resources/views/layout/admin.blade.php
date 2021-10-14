@@ -44,8 +44,8 @@
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 10l-2 1m0 0l-2-1m2 1v2.5M20 7l-2 1m2-1l-2-1m2 1v2.5M14 4l-2-1-2 1M4 7l2-1M4 7l2 1M4 7v2.5M12 21l-2-1m2 1l2-1m-2 1v-2.5M6 18l-2-1v-2.5M18 18l2-1v-2.5" />
                               </svg>
                         </div>
-                        <a class="block px-4 py-2 pl-14 pr-4 mt-36 text-base text-gray-500 transition duration-500 ease-in-out transform border-l-4 border-white hover:border-blue-600 focus:shadow-outline focus:outline-none focus:ring-2 ring-offset-current ring-offset-2 hover:text-white"
-                            href="{{ route('Admin.index') }}">Bikes</a>
+                        <a class="block px-4 py-2 pl-14 pr-4 mt-28 text-base text-gray-500 transition duration-500 ease-in-out transform border-l-4 border-white hover:border-blue-600 focus:shadow-outline focus:outline-none focus:ring-2 ring-offset-current ring-offset-2 hover:text-white"
+                            href="">Bikes</a>
                             <button class="absolute inset-y-0 right-0 p-1 flex items-center">
                                 <svg
                                     class="w-6 hover:text-white" 
@@ -56,7 +56,7 @@
                         </li>
                             <div class="pt-2 pl-4">
                                 <ul class="flex flex-col pl-2 border-l text-gray-500 border-gray-700">
-                                    <li><a href="#"class="inline-block w-full px-4 py-2 text-sm hover:text-white">Brands</a></li>
+                                    <li><a href="{{ route('Admin.index') }}"class="inline-block w-full px-4 py-2 text-sm hover:text-white focus">Brands</a></li>
                                     <li><a href="#"class="inline-block w-full px-4 py-2 text-sm hover:text-white ">Categories</a></li>
                                 </ul>
                             </div>
