@@ -8,7 +8,7 @@
             <div class="flex flex-wrap -m-4">
                 <div class="lg:w-1/4 md:w-1/2 p-4 w-full">
                     <a class="block relative h-48 rounded overflow-hidden">
-                        <img alt="ecommerce" class="object-cover object-center w-full h-full block" src="https://dummyimage.com/420x260">
+                        <img alt="ecommerce" class="object-cover object-center w-full h-full block" src="/img/bike (1).jpg">
                     </a>
                     <div class="mt-4">
                         <h3 class="text-gray-500 text-xs tracking-widest title-font mb-1">CATEGORY</h3>
@@ -18,7 +18,7 @@
                 </div>
                 <div class="lg:w-1/4 md:w-1/2 p-4 w-full">
                     <a class="block relative h-48 rounded overflow-hidden">
-                        <img alt="ecommerce" class="object-cover object-center w-full h-full block" src="https://dummyimage.com/421x261">
+                        <img alt="ecommerce" class="object-cover object-center w-full h-full block" src="/img/bike (40).jpg">
                     </a>
                     <div class="mt-4">
                         <h3 class="text-gray-500 text-xs tracking-widest title-font mb-1">CATEGORY</h3>
@@ -28,7 +28,7 @@
                 </div>
                 <div class="lg:w-1/4 md:w-1/2 p-4 w-full">
                     <a class="block relative h-48 rounded overflow-hidden">
-                        <img alt="ecommerce" class="object-cover object-center w-full h-full block" src="https://dummyimage.com/422x262">
+                        <img alt="ecommerce" class="object-cover object-center w-full h-full block" src="/img/bike (23).jpg">
                     </a>
                     <div class="mt-4">
                         <h3 class="text-gray-500 text-xs tracking-widest title-font mb-1">CATEGORY</h3>
@@ -38,7 +38,7 @@
                 </div>
                 <div class="lg:w-1/4 md:w-1/2 p-4 w-full">
                     <a class="block relative h-48 rounded overflow-hidden">
-                        <img alt="ecommerce" class="object-cover object-center w-full h-full block" src="https://dummyimage.com/423x263">
+                        <img alt="ecommerce" class="object-cover object-center w-full h-full block" src="/img/bike (58).jpg">
                     </a>
                     <div class="mt-4">
                         <h3 class="text-gray-500 text-xs tracking-widest title-font mb-1">CATEGORY</h3>
@@ -48,7 +48,7 @@
                 </div>
                 <div class="lg:w-1/4 md:w-1/2 p-4 w-full">
                     <a class="block relative h-48 rounded overflow-hidden">
-                        <img alt="ecommerce" class="object-cover object-center w-full h-full block" src="https://dummyimage.com/424x264">
+                        <img alt="ecommerce" class="object-cover object-center w-full h-full block" src="/img/bike (10).jpg">
                     </a>
                     <div class="mt-4">
                         <h3 class="text-gray-500 text-xs tracking-widest title-font mb-1">CATEGORY</h3>
@@ -58,7 +58,7 @@
                 </div>
                 <div class="lg:w-1/4 md:w-1/2 p-4 w-full">
                     <a class="block relative h-48 rounded overflow-hidden">
-                        <img alt="ecommerce" class="object-cover object-center w-full h-full block" src="https://dummyimage.com/425x265">
+                        <img alt="ecommerce" class="object-cover object-center w-full h-full block" src="/img/bike (19).jpg">
                     </a>
                     <div class="mt-4">
                         <h3 class="text-gray-500 text-xs tracking-widest title-font mb-1">CATEGORY</h3>
@@ -68,7 +68,7 @@
                 </div>
                 <div class="lg:w-1/4 md:w-1/2 p-4 w-full">
                     <a class="block relative h-48 rounded overflow-hidden">
-                        <img alt="ecommerce" class="object-cover object-center w-full h-full block" src="https://dummyimage.com/427x267">
+                        <img alt="ecommerce" class="object-cover object-center w-full h-full block" src="/img/bike (25).jpg">
                     </a>
                     <div class="mt-4">
                         <h3 class="text-gray-500 text-xs tracking-widest title-font mb-1">CATEGORY</h3>
@@ -78,7 +78,7 @@
                 </div>
                 <div class="lg:w-1/4 md:w-1/2 p-4 w-full">
                     <a class="block relative h-48 rounded overflow-hidden">
-                        <img alt="ecommerce" class="object-cover object-center w-full h-full block" src="https://dummyimage.com/428x268">
+                        <img alt="ecommerce" class="object-cover object-center w-full h-full block" src="/img/bike (44).jpg">
                     </a>
                     <div class="mt-4">
                         <h3 class="text-gray-500 text-xs tracking-widest title-font mb-1">CATEGORY</h3>
