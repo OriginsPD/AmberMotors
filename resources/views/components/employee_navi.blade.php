@@ -38,7 +38,7 @@
 
 
 <div
-    class=" items-center text-gray-600 z-10 bg-gradient-to-r from-blue-500 to-blue-600 sticky top-0 h-18 left-0 border-b border-white border-l border-blue-700 shadow body-font">
+    class=" items-center text-gray-600 z-30 bg-gradient-to-r from-blue-500 to-blue-600 sticky top-0 h-18 left-0 border-b border-white border-l border-blue-700 shadow body-font">
     <div class="items-center justify-between w-full px-5 py-4 whitespace-nowrap  ">
         <div class="flex flex-col flex-wrap mx-auto md:items-center md:flex-row">
 

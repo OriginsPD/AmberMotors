@@ -13,6 +13,7 @@ class RentalModelStats extends Model
     public $timestamps = false;
 
     protected $fillable = [
+        'employee_id',
         'bike_id',
         'total'
     ];

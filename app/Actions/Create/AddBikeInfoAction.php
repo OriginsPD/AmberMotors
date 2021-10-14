@@ -28,6 +28,7 @@ class AddBikeInfoAction
         ])->id;
 
         RentalModelStats::create([
+            'employee_id' => Auth::id(),
             'bike_id' => $id,
             'total' => 0
         ]);
