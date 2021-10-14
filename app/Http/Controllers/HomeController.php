@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Bike\Bike_Brand;
 use App\Models\Bike\Bike_Category;
 use App\Models\Bike\Bike_Detail;
+use App\Models\Employee;
 use Illuminate\Http\Request;
 use Illuminate\View\View;
 
@@ -32,6 +33,8 @@ class HomeController extends Controller
 
     public function team(): View
     {
-        return view('Home.team');
+        $employees = Employee::with('users')->get()->toArray();
+//        dd($employees);
+        return view('Home.team',compact(['employees']));
     }
 }
