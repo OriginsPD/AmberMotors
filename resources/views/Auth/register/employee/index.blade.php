@@ -126,6 +126,57 @@
                             Register
                         </button>
                     </div>
+<<<<<<< HEAD
+
+                </div>
+
+
+                <div
+                    class="flex lg:w-2/3 w-full my-4 sm:flex-row flex-col mx-auto px-8 sm:space-x-4 sm:space-y-0 space-y-4 sm:px-0 items-end">
+                    <div class="relative flex-grow w-full">
+
+                        <div>
+                            <label for=""> Copy of Resume </label>
+                            <button class="bg-gray-600 hover:bg-gray-700 text-white font-bold py-2 px-4 w-full inline-flex items-center">
+                                <svg fill="#FFF" height="18" viewBox="0 0 24 24" width="18" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M0 0h24v24H0z" fill="none"/>
+                                    <path d="M9 16h6v-6h4l-7-7-7 7h4zm-4 2h14v2H5z"/>
+                                </svg>
+                                <span class="ml-2">Upload Resume</span>
+
+                            <input
+                                class="cursor-pointer absolute block py-2 px-4 w-full opacity-0 pin-r pin-t"
+                                type="file"
+                                name="documents[]">
+                            </button>
+                        </div>
+
+                    </div>
+                    <div class="relative flex-grow w-full">
+                        <label for="password_confirmation" class="leading-7 text-sm text-gray-600">Re-Enter
+                            Password
+                            <span class="text-xs ml-4 text-red-700">
+                                @error('password_confirmation')
+                                {{ $message }}
+                                @enderror
+                            </span>
+                        </label>
+                        <input type="password" id="password_confirmation" name="password_confirmation"
+                               class="w-full bg-gray-100 bg-opacity-50 rounded border border-gray-300 @error('password_confirmation') border-red-700 @enderror focus:border-indigo-500 focus:bg-transparent focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out">
+                    </div>
+
+                </div>
+
+
+                <div
+                    class="flex lg:w-2/3 w-full sm:flex-row my-8 flex-col mx-auto px-8 sm:space-x-4 sm:space-y-0 space-y-4 sm:px-0 items-end">
+                    <button
+                        class="text-white bg-blue-500 w-8/12 mx-auto border-0 py-2 px-8 focus:outline-none hover:bg-blue-600 rounded text-lg">
+                        Register
+                    </button>
+                </div>
+=======
+>>>>>>> cb77c4406e0bdce5e6c1b72f0fb8f7253ab58730
 
             </div>
             </form>
