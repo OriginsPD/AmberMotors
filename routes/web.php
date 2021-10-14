@@ -2,6 +2,7 @@
 
 
 use App\Http\Controllers\Admin\AdminEmployeeController;
+use App\Http\Controllers\Admin\AdminRentalController;
 use App\Http\Controllers\Admin\AdminUserController;
 use App\Http\Controllers\Admin\AdminCategoryController;
 use App\Http\Controllers\Admin\AdminController;
@@ -42,9 +43,8 @@ Route::resource('Admin', AdminController::class);
 Route::get('Users',function(){return view('Admin.users');})->name('user');
 Route::resource('AdminEmployee', AdminEmployeeController::class);
 Route::resource('AdminCategory', AdminCategoryController::class);
+Route::resource('AdminRental', AdminRentalController::class);
 Route::resource('AdminUser', AdminUserController::class);
-
-
 
 //Route For Logout
 Route::post('logout', [LogoutController::class, 'logout'])->name('logout');

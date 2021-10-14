@@ -34,7 +34,7 @@
           <th class="py-4 px-6 bg-grey-lightest font-bold uppercase text-sm text-grey-dark border-b border-grey-light">Actions</th>
         </tr>
       </thead>
-      <tbody class="flex flex-col overflow-y-scroll w-full" style="height: 80vh;">
+      <tbody class="" style="">
         <div>
         @foreach ($brands as $brand)
         <tr class="hover:bg-grey-lighter">
@@ -44,7 +44,7 @@
               @csrf
               @method('DELETE')
               <button class="bg-red-500 text-grey-lighter font-bold py-1 px-3 rounded text-xs bg-blue hover:bg-blue-dark">Delete</button>
-              <button class="bg-green-500 text-grey-lighter font-bold py-1 px-3 rounded text-xs bg-blue hover:bg-blue-dark"><a href="{{ route('AdminCategory.show',$brand->id) }}"> View Categories</a></button>
+              <button class="bg-green-500 text-grey-lighter font-bold py-1 px-3 rounded text-xs bg-blue hover:bg-blue-dark"><a href="{{ route('AdminCategory.index') }}"> View Categories</a></button>
               </form>
           </td>
         </tr>

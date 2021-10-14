@@ -34,7 +34,7 @@ class CategorySeeder extends Seeder
 
           Bike_Category::create([
             'category_nm' => $category,
-            'brand_id'=>rand(1,8),  
+            // 'brand_id'=>rand(1,8),  
           ]);
         }
       

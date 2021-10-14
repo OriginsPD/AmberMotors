@@ -3,12 +3,10 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
-use App\Models\Bike\Bike_Category;
-use App\Models\Bike\Bike_Brand;
+use App\Models\Payment\Rental;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\DB;
 
-class AdminCategoryController extends Controller
+class AdminRentalController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -17,8 +15,9 @@ class AdminCategoryController extends Controller
      */
     public function index()
     {
-      $bikes = Bike_Category::all();
-      return view('Admin.show',['bikes'=>$bikes]);
+        $allrentals = Rental::with('bike_details','users','employees')->orderBy('return_date')->get()->toArray();
+        // dd($allrentals);  
+        return  view('Admin.rentalindex',['allrentals'=>$allrentals]);
     }
 
     /**
@@ -26,14 +25,10 @@ class AdminCategoryController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create(Request $req)
+    public function create()
     {
-        Bike_Category::create([
-          'category_nm'=>$req->category,
-        ]);
-        return redirect()->back();
+        //
     }
-
 
     /**
      * Store a newly created resource in storage.
@@ -54,7 +49,8 @@ class AdminCategoryController extends Controller
      */
     public function show($id)
     {
-        //
+      $allrentals = Rental::with('bike_details','users','employees')->where('id',$id)->get();
+      return view('Admin.rentalshow',['allrentals'=>$allrentals]);
     }
 
     /**
@@ -88,9 +84,6 @@ class AdminCategoryController extends Controller
      */
     public function destroy($id)
     {
-  
-        $destroycategory= Bike_Category::where('id',$id);
-        $destroycategory->delete();
-        return back();
+        //
     }
 }
