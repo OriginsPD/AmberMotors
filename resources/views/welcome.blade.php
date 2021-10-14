@@ -89,18 +89,21 @@
         <div class="grid gap-8 mt-6 sm:grid-cols-2 md:grid-cols-4">
             <select
                 class="border-gray-300 rounded-md shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50">
+                <option selected disabled >Select Brand</option>
                 <option>Eqypt</option>
                 <option>Germany</option>
                 <option>US</option>
             </select>
             <select
                 class="border-gray-300 rounded-md shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50">
+                <option selected disabled >Select Category</option>
                 <option>I20</option>
                 <option>GXR</option>
                 <option>BMW</option>
             </select>
             <select
                 class="border-gray-300 rounded-md shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50">
+                <option selected >Select Models</option>
                 <option>GTX2020</option>
                 <option>GRE2019</option>
             </select>
@@ -119,7 +122,7 @@
             <div class="w-full md:w-1/2">
                 <div class="max-w-md mx-auto">
                     <h1 class="text-2xl font-medium tracking-wide text-gray-800 md:text-4xl">
-                        Why us?
+                        Why Us?
                     </h1>
                     <p class="mt-5 leading-7 text-gray-600">
                         With us you will quickly get the bike you want. With our partner
@@ -166,12 +169,12 @@
             </div>
         </div>
     </div>
-    <div id="contact" class="max-w-3xl px-6 py-10 mx-auto">
+{{--     <div id="contact" class="max-w-3xl px-6 py-10 mx-auto">
         <h1 class="text-2xl font-medium tracking-wide text-center text-gray-800 md:text-4xl">
-            Contact with us
+            Contact Us
         </h1>
         <p class="mt-2 text-center text-gray-600">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+           Lets ride together!
         </p>
         <div class="flex flex-col mt-6 space-y-5 sm:flex-row sm:items-center sm:space-y-0 sm:space-x-5">
             <input type="text" placeholder="Name"
@@ -189,4 +192,4 @@
             </button>
         </div>
 
-@endsection
+ --}}@endsection

@@ -18,7 +18,7 @@
                          <div class="w-full flex-none text-xs text-blue-700 font-medium ">
                               Shop
                          </div>
-                         <h2 class="flex-auto text-lg font-medium">Buyers</h2>
+                         <h2 class="flex-auto text-lg font-medium">Customers</h2>
                      </div>
                      <p class="mt-3"></p>
                      <div class="flex py-4  text-sm text-gray-500">
@@ -61,7 +61,7 @@
                          </div>
                          <button
                              class="mb-2 md:mb-0 bg-gray-900 px-5 py-2 shadow-sm tracking-wider text-white rounded-full hover:bg-gray-800"
-                             type="button" aria-label="like"><a href="{{ route('AdminUser.index') }}">View Buyers</a> </button>
+                             type="button" aria-label="like"><a href="{{ route('AdminUser.index') }}">View Customers</a> </button>
                      </div>
                  </div>
              </div>
@@ -79,7 +79,7 @@
                          <div class="w-full flex-none text-xs text-blue-700 font-medium ">
                              Shop
                          </div>
-                         <h2 class="flex-auto text-lg font-medium">Employees</h2>
+                         <h2 class="flex-auto text-lg font-medium">Associates</h2>
                      </div>
                      <p class="mt-3"></p>
                      <div class="flex py-4  text-sm text-gray-500">
@@ -116,7 +116,7 @@
                          </div>
                          <button
                              class="mb-2 md:mb-0 bg-gray-900 px-5 py-2 shadow-sm tracking-wider text-white rounded-full hover:bg-gray-800"
-                             type="button" aria-label="like"><a href="{{ route('AdminEmployee.index') }}">View Employees</a></button>
+                             type="button" aria-label="like"><a href="{{ route('AdminEmployee.index') }}">View Associates</a></button>
                      </div>
                  </div>
              </div>
