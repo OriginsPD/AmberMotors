@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Auth\Register;
 
+use App\Actions\Create\CreateEmployeeAction;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\CreateUser;
 use App\Models\Employee;
@@ -19,25 +20,9 @@ class EmployeeController extends Controller
         return view('Auth.register.employee.index');
     }
 
-    public function store(CreateUser $request): RedirectResponse
+    public function store(CreateUser $request,CreateEmployeeAction $employeeAction): RedirectResponse
     {
-        User::create($request->validated());
-
-        if (Auth::attempt([
-            'email'=>$request->email,
-            'password'=>$request->password]))
-        {
-            role_user::create([
-                'user_id' => Auth::id(),
-                'role_id' => 2,
-            ]);
-
-            Employee::create([
-                'employee_id' =>  Auth::id(),
-                'user_id' => Auth::id(),
-            ]);
-        }
-
+        $employeeAction->execute($request);
         return redirect()->route('Owner.index');
     }
 }

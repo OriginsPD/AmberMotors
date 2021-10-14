@@ -4,6 +4,9 @@ namespace App\Http\Controllers\Admin;
 
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use App\Models\Bike\Bike_Detail;
+use App\Models\Payment\Rental;
+use App\Models\User;
 use Illuminate\Support\Facades\DB;
 
 
@@ -54,7 +57,40 @@ class AdminEmployeeController extends Controller
      */
     public function show($id)
     {
-        //
+      $bikeowned = DB::table('bike_details')
+      ->join('bike_categories','bike_categories.id','=','bike_details.category_id')
+      ->join('bike_brands','bike_brands.id','=','bike_details.brand_id')
+      ->join('employees','employees.employee_id','=','bike_details.employee_id')
+      ->join('users','users.id','=','employees.user_id')
+      ->select('*')
+      ->where('users.id',$id)
+      ->get();
+      // dd($bikeowned);
+
+      // $allsales= DB::table('rentals')
+      // ->join('employees','employees.id','=','rentals.employee_id')
+      // ->join('users','users.id','=','rentals.id')
+      // ->join('bike_details','bike_details.id','=','rentals.bike_id')
+      // ->select('*')
+      // ->where('payment_status','=',1)
+      // ->where('users.id',$id)
+
+      // Rental::with('employees')->where('employee_id',$id)
+      // ->get()->toArray();
+
+      $allsales = User::with(['rentals' => function($query) use ($id) {
+        $query->where('payment_status',1);
+        $query->where('employee_id',$id);
+      }])->whereHas('rentals',function($query) use ($id){
+        $query->where('employee_id',$id);
+        $query->where('payment_status',1); 
+      })
+      ->get()->toArray();
+
+      // dd($allsales);
+
+      // dd($allsales);
+        return view('Admin.Employee.show',compact('bikeowned','allsales'));
     }
 
     /**

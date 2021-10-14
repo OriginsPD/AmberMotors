@@ -17,15 +17,17 @@ class BikeDetailSeeder extends Seeder
     {
      $models= ['A1','A2','A3','A4','A5'];
         $bikedetails= Bike_Detail::with('bike_brands','employees','bike_category')->get();
-        // dd($bikedetails);
+//        dd($bikedetails);
         foreach($bikedetails as $bike){
         Bike_Detail::create([
           'category_id'=>$bike->category_id,
           'brand_id'=>$bike->brand_id,
           'employee_nbr'=>$bike->employee_nbr,
           'bike_model'=>'A1',
-          'rent_fee'=>rand(5000,8000),
-          'availability'=>rand(0,1),
+          'rent_fee'=>random_int(5000,8000),
+          'availability'=>random_int(0,1),
+            'image_path' => 'ghsahsahjsda',
+            'active_flg' => 0
         ]);
       }
     }

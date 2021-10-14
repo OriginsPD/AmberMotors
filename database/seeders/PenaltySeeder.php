@@ -15,7 +15,7 @@ class PenaltySeeder extends Seeder
      */
     public function run(): void
     {
-        $bikeIDs = [1, 2, 3, 5, 6, 7, 8];
+        $bikeIDs = [3, 4, 5, 6];
 
         foreach ($bikeIDs as $bikeID) {
             Penalty::create([
