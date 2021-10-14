@@ -5,9 +5,9 @@
 @section('content')
     <section class="text-gray-600 body-font">
         <div 
-        class="w-full h-full bg-no-repeat bg-cover py-8 px-8 bg-blend-darken" 
-        style="background-image: url('/img/customer-signup-img.jpg')">
-        <div class=" px-5  mx-auto">
+        class="w-full h-full bg-no-repeat bg-cover py-8 bg-blend-darken" 
+        style="background-image: linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.3)),url('/img/customer-signup-img.jpg')">
+        <div class=" px-8  mx-auto">
             <div class="flex flex-col text-center w-full mb-12">
                 <h1 class="sm:text-6xl text-4xl font-bold uppercase title-font mb-4 text-white">Welcome To The World
                     Of <br> Bike Lovers!</h1>
