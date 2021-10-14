@@ -24,7 +24,6 @@
                 <a href="{{ route('Home.brands') }}" class="block font-medium text-gray-700 hover:text-gray-900 hover:underline">
                     Brands</a>
                 <a href="{{ route('Home.team') }}" class="block font-medium text-gray-700 hover:text-gray-900 hover:underline">Team Members</a>
-                <a href="#contact" class="block font-medium text-gray-700 hover:text-gray-900 hover:underline">Contact</a>
 
                 @guest
                     <div>

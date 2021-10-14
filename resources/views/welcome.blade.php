@@ -12,10 +12,10 @@
         </div>
             <div class="flex flex-col absolute right-0 -mt-24 items-start text-left lg:flex-grow md:w-1/2 lg:pl-24 md:pl-16">
                 <h1 class="mb-8 text-2xl font-bold tracking-tighter text-left text-white lg:text-6xl title-font">
-                    <span class="text-white p-1 mr-4 bg-yellow-600 rounded-l-full">
+                    <span class="text-white p-1 bg-yellow-600 rounded-l-full">
                         <i class="far p-1 text-center ml-4 fa-biking text-6xl"></i>
                     </span>
-                    <span class="text-white">Amber</span>Motors </h1>
+                    <span class="text-blue-600 border border-white py-1 px-2 bg-white pr-4 rounded-r-full">AmberMotors </span></h1>
                 <p class="mb-8 text-white leading-relaxed text-left text-2xl italic font-bold text-blueGray-700 ">Have Freedom Your Way On The Road.</p>
             </div>
         </div>
