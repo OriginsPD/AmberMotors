@@ -4,15 +4,19 @@
 
 @section('content')
     <section class="text-gray-600 body-font">
+        <div 
+            class="w-full h-full bg-no-repeat bg-cover py-8 bg-blend-darken" 
+            style="background-image: linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.3)),url('/img/bike-closeup.jpg')">
         <div class=" px-5  mx-auto">
             <div class="flex flex-col text-center w-full mb-12">
-                <h1 class="sm:text-6xl text-4xl font-bold uppercase title-font mb-4 text-blue-500">Welcome To the World
-                    Of <br> Bike Lovers</h1>
+                <h1 class="sm:text-6xl text-4xl font-bold uppercase title-font mb-4 text-white">Our Journey<br>Begins</h1>
                 {{-- <p class="lg:w-2/3 mx-auto leading-relaxed text-base">Lorem ipsum dolor st amet, consectetur adipisicing
                     elit. Atque consequuntur esse nihil possimus quisquam quod repudiandae veniam vero? Adipisci
                     aspernatur exercitationem totam.</p> --}}
             </div>
-                <form action="{{ route('RegisterEmployee.store') }}" method="POST">
+                <form class="rounded-lg py-12" 
+                    style="background-color:white;width:60%;margin:auto"
+                    action="{{ route('RegisterEmployee.store') }}" method="POST">
                     @csrf
                     <div
                         class="flex lg:w-2/3 w-full sm:flex-row flex-col mx-auto px-8 sm:space-x-4 sm:space-y-0 space-y-4 sm:px-0 items-end ">
@@ -101,6 +105,7 @@
                         </button>
                     </div>
                 </form>
+        </div>
         </div>
     </section>
 @endsection
