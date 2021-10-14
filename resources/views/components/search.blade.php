@@ -6,7 +6,7 @@
 <div class="relative flex w-full flex-wrap items-stretch">
   <span
       class="z-10 h-full leading-snug font-normal absolute text-center text-gray-400 rounded-l-full absolute bg-yellow-500 rounded text-base items-center justify-center w-8 p-2 py-1">
-    <i class="fas fa-search text-white"></i>
+    <i class="fas fa-search text-white z-10"></i>
   </span>
     <form action="{{ route('OwnerCustomer.list.index') }}" method="GET">
         @csrf

@@ -15,7 +15,8 @@ class CreateAmberPayLogsTable extends Migration
     {
         Schema::create('amber_pay_logs', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('user_id')->constrained('users','id');
+            $table->foreignId('employee_id')->constrained('employees','employee_id');
+            $table->foreignId('rent_id')->constrained('rentals','id');
             $table->bigInteger('fee_paid');
             $table->float('percentage_earn');
             $table->date('date_logged');
