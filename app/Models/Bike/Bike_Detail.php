@@ -4,7 +4,7 @@ namespace App\Models\Bike;
 
 use App\Models\Employee;
 use App\Models\Payment\Rental;
-use App\Models\RentalModelStats;
+use App\Models\Payment\RentalModelStats;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Facades\Auth;

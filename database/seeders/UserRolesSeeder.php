@@ -12,15 +12,18 @@ class UserRolesSeeder extends Seeder
      * Run the database seeds.
      *
      * @return void
+     * @throws \Exception
      */
-    public function run()
+    public function run(): void
     {
 
       foreach (User::all() as $user){
+
       role_user::create([
         'user_id'=>$user->id,
-        'role_id'=>rand(1,3),
+        'role_id'=>random_int(1,3),
       ]);
+
       }
     }
 }

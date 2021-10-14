@@ -14,15 +14,18 @@
                         <h2 class="mb-8 text-xs font-semibold tracking-widest text-black uppercase title-font">
                             </h2>
                         <strong
-                            class="flex items-end justify-center mx-auto mb-8 text-3xl font-black leading-none text-center text-black lg:text-4xl ">
-                            $0
+                            class="flex items-end justify-center mx-auto mb-8 text-3xl font-black leading-none text-center lg:text-4xl ">
+                            <span class="@if($income[0]['accumulate_amt']) text-green-500 @endif text-red-600">
+                            $ {{ number_format($income[0]['accumulate_amt'],'2') }}
+                            </span>
+
                         </strong>
-                        <h1 class="mx-auto mb-8 text-2xl font-semibold leading-none tracking-tighter text-black lg:text-3xl title-font">
-                            Grand Total Made. </h1>
+                        <h1 class="mx-auto mb-8 text-2xl font-semibold leading-none tracking-tighter text-black lg:uppercase lg:text-2xl title-font">
+                            Accumulated Income</h1>
                         <p class="mx-auto mb-12 text-base text-blueGray-700 lading-relaxed fbont-medium ">You're about
                             to launch soon and must be 100% focused on your product. Don't loose precious days
                             designing, coding the landing page and testing . </p>
-                        <button
+                        <button id="his"
                             class="px-16 py-2 text-base hover:shadow-xl hover:scale-105 transform focus:scale-100 font-medium text-white transition duration-500 ease-in-out transform bg-blue-500 border-blue-100 rounded-md focus:shadow-outline focus:outline-none focus:ring-2 ring-offset-current ring-offset-2 hover:bg-blue-700">
                             History
                         </button>
@@ -37,16 +40,66 @@
                 </div>
             </div>
         </div>
+
+
+        <div id="history"
+             class=" items-center fixed hidden inset-0 z-50 px-5 bg-white bg-opacity-95 h-full w-full py-12 lg:px-20">
+            <x-head class="text-center font-bold mt-2">Income From Past Rentals</x-head>
+
+            <x-table id="client" >
+                <x-slot name="heading">
+                    <x-table.heading> Employee</x-table.heading>
+                    <x-table.heading> Total Fee</x-table.heading>
+                    <x-table.heading> Percentage Earn</x-table.heading>
+                    <x-table.heading> Date Logged</x-table.heading>
+                </x-slot>
+                @forelse($income_logs as $income_log)
+                    <x-table.row class="hover:bg-gray-200" >
+                        <x-table.cell-bold> {{ $income_log['users']['name'] }} </x-table.cell-bold>
+                        <x-table.cell>{{ $income_log['fee_paid'] }}</x-table.cell>
+                        <x-table.cell>{{ $income_log['percentage_earn'] }}</x-table.cell>
+                        <x-table.cell class="break-words">{{ $income_log['date_logged'] }}</x-table.cell>
+                    </x-table.row>
+                @empty
+                    <x-table.row>
+                        <x-table.cell-bold colspan="6" class="text-center">
+                            No Clients Currently Listed
+                        </x-table.cell-bold>
+                    </x-table.row>
+                @endforelse
+            </x-table>
+
+
+            <button id="his-close"
+                class="bg-blue-500 mt-4 ml-8 text-white active:bg-blue-600 font-bold uppercase text-xs px-4 py-2 rounded-full shadow hover:shadow-md outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
+                type="button">
+                <i class="far fa-times-circle"></i> Close
+            </button>
+        </div>
+
+
     </section>
 
 
     <script>
 
+        $(document).ready(function () {
+            $("#his").on('click', function () {
+                $('#history').fadeToggle("slow");
+            });
+
+            $("#his-close").on('click', function () {
+                $('#history').fadeToggle("slow");
+            });
+
+
+        });
+
         const dataDoughnut = {
             labels: [
-                'JavaScript',
-                'Python',
-                'Ruby'
+                'Bike 1',
+                'Bike 2',
+                'Bike 3'
             ],
             datasets: [{
                 label: 'My First Dataset',

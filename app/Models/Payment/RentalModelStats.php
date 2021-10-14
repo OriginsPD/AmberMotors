@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Models;
+namespace App\Models\Payment;
 
 use App\Models\Bike\Bike_Detail;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
@@ -21,4 +21,5 @@ class RentalModelStats extends Model
     {
         return $this->belongsTo(Bike_Detail::class,'bike_id');
     }
+
 }

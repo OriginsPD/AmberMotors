@@ -41,7 +41,7 @@
                                 </form>
                             </x-table.cell>
                             @endif
-                            <x-table.cell-edit href="#"> View </x-table.cell-edit>
+                            <x-table.cell-edit href="{{ route('AdminEmployee.show',$employee->id) }}"> View </x-table.cell-edit>
                     </x-table.row>
                 @endforeach
             </x-table>
