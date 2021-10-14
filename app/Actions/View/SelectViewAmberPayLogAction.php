@@ -9,7 +9,7 @@ class SelectViewAmberPayLogAction
 {
     public function execute()
     {
-       return AmberPay_log::with('users')->where('user_id',Auth::id())
+       return AmberPay_log::with('rental','employee')
             ->get()->toArray();
     }
 }

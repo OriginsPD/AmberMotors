@@ -48,16 +48,16 @@
 
             <x-table id="client" >
                 <x-slot name="heading">
-                    <x-table.heading> Employee</x-table.heading>
+                    <x-table.heading> Customer</x-table.heading>
                     <x-table.heading> Total Fee</x-table.heading>
                     <x-table.heading> Percentage Earn</x-table.heading>
                     <x-table.heading> Date Logged</x-table.heading>
                 </x-slot>
                 @forelse($income_logs as $income_log)
                     <x-table.row class="hover:bg-gray-200" >
-                        <x-table.cell-bold> {{ $income_log['users']['name'] }} </x-table.cell-bold>
+                        <x-table.cell-bold> {{ $income_log['rental']['users']['name'] }} </x-table.cell-bold>
                         <x-table.cell>{{ $income_log['fee_paid'] }}</x-table.cell>
-                        <x-table.cell>{{ $income_log['percentage_earn'] }}</x-table.cell>
+                        <x-table.cell>{{ $income_log['percentage_earn'] * 100 }}%</x-table.cell>
                         <x-table.cell class="break-words">{{ $income_log['date_logged'] }}</x-table.cell>
                     </x-table.row>
                 @empty
