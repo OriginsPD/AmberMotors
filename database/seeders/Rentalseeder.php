@@ -20,16 +20,21 @@ class RentalSeeder extends Seeder
     public function run(): void
     {
 
+        $users = User::with(['role_users' => static function($query){
+            $query->where('role_id',1);
+        }])->whereHas('role_users',static function ($query){
+            $query->where('role_id',1);
+        })->get()->toArray();
 
-        $bikeIDs = [1,2,3,4,5];
+        $bikeIDs = 0;
 
 
-      foreach ($bikeIDs as $bikeID){
-
+        foreach ($users as $user) {
+            ++$bikeIDs;
       Rental::create([
-        'user_id' => $bikeID,
-        'employee_id' => 1,
-        'bike_id' => $bikeID,
+        'user_id' => $user['id'],
+        'employee_id' => 11,
+        'bike_id' => $bikeIDs,
         'payment_fee' => random_int(1000,8000),
         'payment_status' => random_int(0,1),
         'rent_status' => random_int(0,1),
@@ -37,8 +42,6 @@ class RentalSeeder extends Seeder
         'rental_end_date' => Carbon::tomorrow('Jamaica'),
         'return_date' => Carbon::parse('this sunday')->toDateString(),
       ]);
-
-
     }
 }
 }

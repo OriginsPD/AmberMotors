@@ -77,6 +77,7 @@
             </button>
         </div>
 
+        <span id="stats" class="hidden" >{{ $stats }}</span>
 
     </section>
 
@@ -95,6 +96,9 @@
 
         });
 
+        let stats = document.getElementById('stats').innerHTML;
+        console.log(stats);
+
         const dataDoughnut = {
             labels: [
                 'Bike 1',
@@ -104,6 +108,7 @@
             datasets: [{
                 label: 'My First Dataset',
                 data: [300, 50, 100],
+
                 backgroundColor: [
                     'rgb(133, 105, 241)',
                     'rgb(164, 101, 241)',

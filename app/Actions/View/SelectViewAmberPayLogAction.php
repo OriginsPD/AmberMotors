@@ -7,7 +7,7 @@ use Illuminate\Support\Facades\Auth;
 
 class SelectViewAmberPayLogAction
 {
-    public function execute()
+    public function execute(): array
     {
        return AmberPay_log::with('rental','employee')
             ->get()->toArray();

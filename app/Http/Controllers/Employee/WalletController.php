@@ -19,7 +19,7 @@ class WalletController extends Controller
         $income_logs = $amberPayLogAction->execute();
         $stats = $statsAction->execute();
 //        dd($stats);
-        return view('Employee.wallet.index',compact(['income','income_logs']));
+        return view('Employee.wallet.index',compact(['income','income_logs','stats']));
     }
 
 }
