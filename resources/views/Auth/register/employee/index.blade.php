@@ -123,16 +123,7 @@
 
                     </div>
                     <div class="relative flex-grow w-full">
-                        <label for="password_confirmation" class="leading-7 text-sm text-gray-600">Re-Enter
-                            Password
-                            <span class="text-xs ml-4 text-red-700">
-                                @error('password_confirmation')
-                                {{ $message }}
-                                @enderror
-                            </span>
-                        </label>
-                        <input type="password" id="password_confirmation" name="password_confirmation"
-                               class="w-full bg-gray-100 bg-opacity-50 rounded border border-gray-300 @error('password_confirmation') border-red-700 @enderror focus:border-indigo-500 focus:bg-transparent focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out">
+
                     </div>
 
                 </div>
