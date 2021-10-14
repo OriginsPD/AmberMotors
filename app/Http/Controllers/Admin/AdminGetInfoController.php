@@ -16,8 +16,9 @@ class AdminGetInfoController extends Controller
      */
     public function getInfo($id){
 
+      $allrentals = Rental::with('bike_details','users','employees')->where('id',$id)->get();
       return response()->json([
-        'success'=>$id
+        'success'=>$allrentals
       ]);
    } 
 }

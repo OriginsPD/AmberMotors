@@ -44,7 +44,7 @@
               @csrf
               @method('DELETE')
               <button class="bg-red-500 text-grey-lighter font-bold py-1 px-3 rounded text-xs bg-blue hover:bg-blue-dark">Delete</button>
-              <button class="bg-green-500 text-grey-lighter font-bold py-1 px-3 rounded text-xs bg-blue hover:bg-blue-dark"><a href="{{ route('AdminCategory.index') }}"> View Categories</a></button>
+              {{-- <button class="bg-green-500 text-grey-lighter font-bold py-1 px-3 rounded text-xs bg-blue hover:bg-blue-dark"><a href="{{ route('AdminCategory.index') }}"> View Categories</a></button> --}}
               </form>
           </td>
         </tr>

@@ -33,13 +33,16 @@
                                 PENDING
                             </x-table.cell>
                         @endif
-                        <x-table.cell><a id="openmodal">More Details</a></x-table.cell>                     
+                        {{-- <x-table.cell><a id="openmodal">More Details</a></x-table.cell>                      --}}
                     </x-table.row>
                 @endforeach
             </x-table>
         </div>
     </div>
+    @foreach ($allrentals as $rental)
+      
     <input hidden id="getid" value="{{ $rental['id'] }}">
+    @endforeach
     <div id="searchid"
     class=" items-center fixed hidden inset-0 z-50 px-5 bg-white bg-opacity-95 h-full w-full py-12 lg:px-20">
   

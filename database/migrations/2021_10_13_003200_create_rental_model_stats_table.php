@@ -15,7 +15,7 @@ class CreateRentalModelStatsTable extends Migration
     {
         Schema::create('rental_model_stats', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('bike_id')->constrained('bike_details','id');
+            $table->foreignId('bike_id')->constrained('bike_details','id')->onDelete('cascade');
             $table->integer('total');
         });
     }

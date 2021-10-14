@@ -18,7 +18,7 @@ class AdminCategoryController extends Controller
     public function index()
     {
       $bikes = Bike_Category::all();
-      return view('Admin.show',['bikes'=>$bikes]);
+      return view('Admin.categories',['bikes'=>$bikes]);
     }
 
     /**
@@ -88,7 +88,6 @@ class AdminCategoryController extends Controller
      */
     public function destroy($id)
     {
-  
         $destroycategory= Bike_Category::where('id',$id);
         $destroycategory->delete();
         return back();

@@ -56,8 +56,8 @@
                         </li>
                             <div class="pt-2 pl-4">
                                 <ul class="flex flex-col pl-2 border-l text-gray-500 border-gray-700">
-                                    <li><a href="#"class="inline-block w-full px-4 py-2 text-sm hover:text-white">Brands</a></li>
-                                    <li><a href="#"class="inline-block w-full px-4 py-2 text-sm hover:text-white ">Categories</a></li>
+                                    <li><a href="{{ route('Admin.index') }}"class="inline-block w-full px-4 py-2 text-sm hover:text-white">Brands</a></li>
+                                    <li><a href="{{ route('AdminCategory.index') }}"class="inline-block w-full px-4 py-2 text-sm hover:text-white ">Categories</a></li>
                                 </ul>
                             </div>
                     <li class="relative text-gray-500 hover:text-white">
@@ -80,7 +80,7 @@
                               </svg>
                         </div>
                         <a class="block px-4 py-2 pl-14 pr-4 mt-2 text-base text-gray-500 transition duration-500 ease-in-out transform border-l-4 border-white hover:border-blue-600 focus:shadow-outline focus:outline-none focus:ring-2 ring-offset-current ring-offset-2 hover:text-white"
-                            href="#">Rental History</a>
+                            href="{{ route('AdminRental.index') }}">Rental History</a>
                     </li>
                     <li class="relative text-gray-500 hover:text-white">
                         <div class="absolute inset-y-0 left-0 flex items-center pl-6 pr-4 ">
@@ -91,7 +91,7 @@
                               </svg>
                         </div>
                         <a class="block px-4 py-2 pl-14 pr-4 mt-2 text-base text-gray-500 transition duration-500 ease-in-out transform border-l-4 border-white hover:border-blue-600 focus:shadow-outline focus:outline-none focus:ring-2 ring-offset-current ring-offset-2 hover:text-white"
-                            href="#">Services</a>
+                            href="#">Settings</a>
                     </li>
                     <div class="px-6 pt-4 mt-40">
                         <hr class="border-gray-700" >

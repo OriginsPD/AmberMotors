@@ -104,7 +104,6 @@
                             Register
                         </button>
                     </div>
-<<<<<<< HEAD
 
                 </div>
 
@@ -155,9 +154,6 @@
                 </div>
 
             </form>
-=======
-                </form>
->>>>>>> d0e52b0eb986a80a03b8965d47195af9273d94af
         </div>
         </div>
     </section>
