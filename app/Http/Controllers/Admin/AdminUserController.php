@@ -62,18 +62,17 @@ class AdminUserController extends Controller
     {
       $customerrental = DB::table('rentals')
       ->join('users','users.id','=','rentals.user_id')
-      ->join('employees','employees.id','=','rentals.employee_id')
+      ->join('employees','employees.employee_id','=','rentals.employee_id')
       ->join('bike_details','bike_details.id','=','rentals.bike_id')
       ->select('*') 
       ->where('rentals.user_id',$id)
       ->get();
 
+      $name = DB::table('users')->select('name')->where('id',$id)->get();
+      // dd($name);
       // $customerrental = Rental::with('users')->where('user_id',$id)->get();
-
       // dd($customerrental);
-
-
-        return view('Admin.Users.show',['customerrental'=>$customerrental]);
+        return view('Admin.Users.show',['customerrental'=>$customerrental,'name'=>$name]);
     }
 
     /**

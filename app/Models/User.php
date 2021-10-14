@@ -74,7 +74,7 @@ class User extends Authenticatable
 
     public function rentals(): \Illuminate\Database\Eloquent\Relations\HasMany
     {
-        return $this->hasMany(Rental::class, 'user_id');
+        return $this->hasMany(Rental::class, 'user_id')->with('bike_details');
     }
 
     public function amberpays(): \Illuminate\Database\Eloquent\Relations\HasOne
@@ -82,8 +82,4 @@ class User extends Authenticatable
         return $this->hasOne(AmberPay::class, 'user_id');
     }
 
-    public function amberpay_logs(): \Illuminate\Database\Eloquent\Relations\HasMany
-    {
-        return $this->hasMany(AmberPay_log::class, 'user_id');
-    }
 }
