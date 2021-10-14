@@ -27,6 +27,6 @@ class AmberPay_log extends Model
 
     public function rental(): \Illuminate\Database\Eloquent\Relations\BelongsTo
     {
-        return $this->belongsTo(Rental::class,'rent_id');
+        return $this->belongsTo(Rental::class,'rent_id')->with('users');
     }
 }
