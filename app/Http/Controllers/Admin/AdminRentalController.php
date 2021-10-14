@@ -50,7 +50,7 @@ class AdminRentalController extends Controller
     public function show($id)
     {
       $allrentals = Rental::with('bike_details','users','employees')->where('id',$id)->get();
-      return view('Admin.rentalshow',['allrentals'=>$allrentals]);
+      return view('Admin.rentalindex ',['allrentals'=>$allrentals]);
     }
 
     /**
@@ -86,4 +86,5 @@ class AdminRentalController extends Controller
     {
         //
     }
+
 }

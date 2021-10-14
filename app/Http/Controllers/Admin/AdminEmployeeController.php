@@ -67,17 +67,6 @@ class AdminEmployeeController extends Controller
       ->get();
       // dd($bikeowned);
 
-      // $allsales= DB::table('rentals')
-      // ->join('employees','employees.id','=','rentals.employee_id')
-      // ->join('users','users.id','=','rentals.id')
-      // ->join('bike_details','bike_details.id','=','rentals.bike_id')
-      // ->select('*')
-      // ->where('payment_status','=',1)
-      // ->where('users.id',$id)
-
-      // Rental::with('employees')->where('employee_id',$id)
-      // ->get()->toArray();
-
       $allsales = User::with(['rentals' => function($query) use ($id) {
         $query->where('payment_status',1);
         $query->where('employee_id',$id);
@@ -86,8 +75,6 @@ class AdminEmployeeController extends Controller
         $query->where('payment_status',1); 
       })
       ->get()->toArray();
-
-      // dd($allsales);
 
       // dd($allsales);
         return view('Admin.Employee.show',compact('bikeowned','allsales'));

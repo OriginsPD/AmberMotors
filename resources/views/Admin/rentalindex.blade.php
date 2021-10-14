@@ -33,11 +33,47 @@
                                 PENDING
                             </x-table.cell>
                         @endif
-                        <x-table.cell><a href="{{ route('AdminRental.show', $rental['id']) }}">More Details</a></x-table.cell>
+                        <x-table.cell><a id="openmodal">More Details</a></x-table.cell>                     
                     </x-table.row>
                 @endforeach
             </x-table>
         </div>
     </div>
+    <input hidden id="getid" value="{{ $rental['id'] }}">
+    <div id="searchid"
+    class=" items-center fixed hidden inset-0 z-50 px-5 bg-white bg-opacity-95 h-full w-full py-12 lg:px-20">
+  
+    
+  
+  </div>
+    <script>
+
+    $(document).ready(function(){
+      // $('#openmodal').on()
+      $('#openmodal').on('click',function (){
+        let id = $('#getid').val()
+        let _token = $('input[name="_token"]').val()
+        let url = new URL('http://127.0.0.1:8000/getuser/'+id+'')
+        $.ajax({
+          type: 'GET',
+          url: url,
+          data: {},
+          success: function (data){
+            let modal = `
+            
+           ${data.success}
+            `
+            $('#searchid').html(modal)
+            // alert(data.success)
+          }
+      })
+        
+        $('#searchid').fadeToggle("slow");
+      });
+
+      $()
+    });
+
+    </script>
 
 @endsection
