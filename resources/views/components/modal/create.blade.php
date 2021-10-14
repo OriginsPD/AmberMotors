@@ -6,17 +6,11 @@
             <button id="close-bike"
                     class="p-1 transition-colors duration-200 transform rounded-md hover:bg-opacity-25 hover:bg-blueGray-600 focus:outline-none"
                     type="button" aria-label="Close" aria-hidden="true">
-                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-circle-x" width="24"
-                     height="24" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none"
-                     stroke-linecap="round" stroke-linejoin="round">
-                    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-                    <circle cx="12" cy="12" r="9"></circle>
-                    <path d="M10 10l4 4m0 -4l-4 4"></path>
-                </svg>
+                <i class="fas fa-window-close text-red-600 text-2xl shadow-lg"></i>
             </button>
         </div>
         <div class="flex flex-col w-full mx-auto mb-2  text-left lg:px-20 lg:text-center">
-            <h1 class="text-2xl font-semibold leading-none tracking-tighter text-black title-font"> Offer The Bike
+            <h1 class="text-3xl font-semibold uppercase leading-none tracking-tighter text-black title-font"> Offer The Bike
                 Experience to Another </h1>
         </div>
         <!-- component -->
@@ -90,7 +84,6 @@
                             @enderror
                         </div>
                     </div>
-
                 </x-form.heading>
             </x-form.index>
         </div>
@@ -102,6 +95,7 @@
         $("#close-bike").on('click', function () {
             $('#model-bike').fadeToggle("slow");
         });
+
 
     });
 </script>

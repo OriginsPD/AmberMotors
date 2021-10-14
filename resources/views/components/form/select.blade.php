@@ -1,7 +1,7 @@
 <div class="w-full flex-1 mx-2">
     <div class="relative inline-block w-full text-gray-700">
         <label>
-            <select {{ $attributes }} class="w-full h-10 pl-3 pr-6 text-base placeholder-gray-600 border rounded-lg appearance-none focus:shadow-outline">
+            <select {{ $attributes }} class="w-full h-10 pl-3 pr-6 text-base placeholder-gray-600 border border-gray-500 rounded-lg appearance-none focus:shadow-outline">
 
                 {{ $slot }}
 

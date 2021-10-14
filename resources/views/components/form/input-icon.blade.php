@@ -21,6 +21,6 @@
     </g>
 </svg>
       </span>
-        <input {{ $attributes }} class="py-2 text-sm border rounded-md pl-10 focus:outline-none bg-white ">
+        <input {{ $attributes }} class="py-2 text-sm border border-gray-500 rounded-md pl-10 focus:outline-none bg-white ">
     </div>
 </div>
