@@ -66,12 +66,14 @@ class AdminUserController extends Controller
       ->join('bike_details','bike_details.id','=','rentals.bike_id')
       ->select('*') 
       ->where('rentals.user_id',$id)
-      ->get();
+      ->get()->toArray();
+
+      
 
       $name = DB::table('users')->select('name')->where('id',$id)->get();
       // dd($name);
       // $customerrental = Rental::with('users')->where('user_id',$id)->get();
-      // dd($customerrental);
+      dd($customerrental);
         return view('Admin.Users.show',['customerrental'=>$customerrental,'name'=>$name]);
     }
 

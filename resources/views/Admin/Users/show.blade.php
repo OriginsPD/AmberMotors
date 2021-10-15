@@ -1,4 +1,4 @@
-@extends('layout.admin')
+xtends('layout.admin')
 
 @section('content')
 @foreach ($name as $n)

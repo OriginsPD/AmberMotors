@@ -7,7 +7,7 @@ use App\Http\Controllers\Admin\AdminUserController;
 use App\Http\Controllers\Admin\AdminCategoryController;
 use App\Http\Controllers\Admin\AdminController;
 use App\Http\Controllers\LogoutController;
-use App\Http\Controllers\AdminGetInfoController;
+use App\Http\Controllers\Admin\AdminGetInfoController;
 use Illuminate\Support\Facades\Route;
 
 /*
