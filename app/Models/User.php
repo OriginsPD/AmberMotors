@@ -82,8 +82,4 @@ class User extends Authenticatable
         return $this->hasOne(AmberPay::class, 'user_id');
     }
 
-    public function amberpay_logs(): \Illuminate\Database\Eloquent\Relations\HasMany
-    {
-        return $this->hasMany(AmberPay_log::class, 'user_id');
-    }
 }

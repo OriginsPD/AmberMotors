@@ -29,7 +29,7 @@ class Employee extends Model
 
     public function users(): \Illuminate\Database\Eloquent\Relations\BelongsTo
     {
-        return $this->belongsTo(User::class,'user_id');
+        return $this->belongsTo(User::class, 'user_id');
     }
 
     public function rentals(): \Illuminate\Database\Eloquent\Relations\HasMany
@@ -41,6 +41,11 @@ class Employee extends Model
     {
         return $this->hasMany(Bike_Detail::class, 'employee_id', 'employee_id')
             ->with('bike_brands', 'bike_category');
+    }
+
+    public function amberpay_log()
+    {
+        return $this->hasMany(AmberPay_log::class,'employee_id');
     }
 
     // public function bike_details(): \Illuminate\Database\Eloquent\Relations\HasMany
