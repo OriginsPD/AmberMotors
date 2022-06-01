@@ -5,22 +5,23 @@
 @section('content')
 
 
-    <section class="text-blueGray-700 bg-gradient-to-tr from-blue-200 to-blue-800">
-        <div class="container relative flex flex-col px-5 py-16 mx-auto lg:items-center md:flex-row lg:px-28">
-        <div class="container w-10/12 z-0 mb-9 shadow-2xl border-8 border-b-8 inset-24 border-white h-screen -ml-96 -my-20 rotate-6 transform" style="clip-path: polygon(20% 0%, 80% 0%, 100% 0, 100% 94%, 55% 100%, 0 100%, 0% 80%, 0 0);">
-            <img class="object-cover object-center z-10 rounded h-full w-screen" alt="hero" height="100%" loading="lazy" src="https://cdn.pixabay.com/photo/2015/09/09/20/11/motorcycle-933022_960_720.jpg">
+<section class="text-blueGray-700 bg-gradient-to-tr from-blue-200 to-blue-800">
+    <div class="container relative flex flex-col px-5 py-16 mx-auto lg:items-center md:flex-row lg:px-28">
+        <div class="container w-10/12 z-0 mb-9 shadow-2xl border-8 border-b-8 inset-24 border-white h-screen -ml-96 -my-20 rotate-6 transform" ">
+        {{-- <div class="container w-10/12 z-0 mb-9 shadow-2xl border-8 border-b-8 inset-24 border-white h-screen -ml-96 -my-20 rotate-6 transform" style="clip-path: polygon(20% 0%, 80% 0%, 100% 0, 100% 94%, 55% 100%, 0 100%, 0% 80%, 0 0);"> --}}
+            <img class=" object-cover object-center z-10 rounded h-full w-screen" alt="hero" height="100%" loading="lazy" src="https://cdn.pixabay.com/photo/2015/09/09/20/11/motorcycle-933022_960_720.jpg">
         </div>
-            <div class="flex flex-col absolute right-0 -mt-24 items-start text-left lg:flex-grow md:w-1/2 lg:pl-24 md:pl-16">
-                <h1 class="mb-8 text-2xl font-bold tracking-tighter text-left text-white lg:text-6xl title-font">
-                    <span class="text-white p-1 bg-yellow-600 rounded-l-full">
-                        <i class="far p-1 text-center ml-4 fa-biking text-6xl"></i>
-                    </span>
-                    <span class="text-blue-600 border border-white py-1 px-2 bg-white pr-4 rounded-r-full">AmberMotors </span></h1>
-                <p class="mb-8 text-white leading-relaxed text-left text-2xl italic font-bold text-blueGray-700 ">Have Freedom Your Way On The Road.</p>
-            </div>
+        <div class="flex flex-col absolute right-0 -mt-24 items-start text-left lg:flex-grow md:w-1/2 lg:pl-24 md:pl-16">
+            <h1 class="mb-8 text-2xl font-bold tracking-tighter text-left text-white lg:text-6xl title-font">
+                <span class="text-white p-1 bg-yellow-600 rounded-l-full">
+                    <i class="far p-1 text-center ml-4 fa-biking text-6xl"></i>
+                </span>
+                <span class="text-blue-600 border border-white py-1 px-2 bg-white pr-4 rounded-r-full">AmberMotors </span></h1>
+            <p class="mb-8 text-white leading-relaxed text-left text-2xl italic font-bold text-blueGray-700 ">Have Freedom Your Way On The Road.</p>
         </div>
-    </section>
-    <section class="text-gray-600 bg-white -mt-24 z-50 body-font">
+    </div>
+</section>
+{{-- <section class="text-gray-600 bg-white -mt-24 z-50 body-font">
         <div class="container px-5 py-24 z-50 mx-auto">
             <h1 class="sm:text-3xl text-2xl font-medium title-font text-center text-gray-900 mb-20">What We Offered
             </h1>
@@ -57,7 +58,7 @@
                 </div>
             </div>
         </div>
-    </section>
+    </section> --}}
 
 
 

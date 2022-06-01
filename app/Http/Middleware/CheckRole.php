@@ -21,15 +21,13 @@ class CheckRole
     {
         $roles = $this->getRoles();
 
-        if (session()->has('role')) {
-            if (in_array(session('role'), $roles, true)) {
-                if (session('role') === 2) {
+        if (session()->has('role') && in_array(session('role'), $roles, true)) {
+            if (session('role') === 2) {
 
-                    return response()->view('Employee.index');
-                }
-                if (session('role') === 3) {
-                    return redirect()->route('Admin.index');
-                }
+                return response()->view('Employee.index');
+            }
+            if (session('role') === 3) {
+                return redirect()->route('Admin.index');
             }
         }
         return $next($request);
